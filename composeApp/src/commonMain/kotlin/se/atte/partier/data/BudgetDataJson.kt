@@ -3,62 +3,104 @@ package se.atte.partier.data
 object BudgetDataJson {
     const val JSON_CONTENT = """
 {
-  "year": 2025,
-  "totalBudget": 1428.0,
+  "year": 2024,
+  "totalBudget": 1331.1,
   "budgetCategories": [
     {
       "id": "municipal_grants",
       "name": "Allmänna bidrag till kommuner",
       "description": "Finansierar välfärdstjänster som skola, sjukvård och social omsorg",
-      "percentage": 13.3,
-      "partyBudgets": []
+      "percentage": 13.1,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 174.3,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "sickness_benefits",
       "name": "Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
       "description": "Sjukförsäkring, ersättningar och stöd till personer med funktionsnedsättning",
-      "percentage": 9.9,
-      "partyBudgets": []
+      "percentage": 8.8,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 116.9,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "healthcare",
       "name": "Hälsovård, sjukvård och social omsorg",
       "description": "Allmän hälso- och sjukvård samt social omsorg",
-      "percentage": 8.5,
-      "partyBudgets": []
+      "percentage": 8.3,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 110.3,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "family_support",
       "name": "Ekonomisk trygghet för familjer och barn",
       "description": "Barnbidrag, föräldrapenning och andra familjestöd",
-      "percentage": 8.4,
-      "partyBudgets": []
+      "percentage": 8.0,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 106.1,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "labor_market",
       "name": "Arbetsmarknad och arbetsliv",
       "description": "Arbetsmarknadspolitik, arbetsförmedling och arbetslivsutveckling",
-      "percentage": 7.3,
-      "partyBudgets": []
+      "percentage": 6.9,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 92.1,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "education",
       "name": "Utbildning och universitetsforskning",
       "description": "Grundskola, gymnasium, universitet och forskning",
-      "percentage": 7.0,
-      "partyBudgets": []
+      "percentage": 7.5,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 99.5,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "migration",
       "name": "Migration",
       "description": "Migrationsverket och asylprocessen",
-      "percentage": 3.2,
+      "percentage": 1.0,
       "partyBudgets": [
         {
           "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 13.8,
-          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-8-migration.pdf"
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         }
       ]
     },
@@ -66,50 +108,99 @@ object BudgetDataJson {
       "id": "defense",
       "name": "Försvar och samhällets krisberedskap",
       "description": "Försvarsmakt, civilförsvar och säkerhetspolitik",
-      "percentage": 5.2,
-      "partyBudgets": []
+      "percentage": 9.5,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 126.1,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "justice",
       "name": "Rättsväsendet",
       "description": "Domstolar, åklagare och kriminalvård",
-      "percentage": 2.8,
-      "partyBudgets": []
+      "percentage": 5.7,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 76.0,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "transport",
       "name": "Kommunikationer",
       "description": "Vägar, järnvägar och kollektivtrafik",
-      "percentage": 2.5,
-      "partyBudgets": []
+      "percentage": 6.2,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 82.9,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "environment",
-      "name": "Miljö och klimat",
+      "name": "Klimat, miljö och natur",
       "description": "Miljöskydd, klimatåtgärder och naturvård",
-      "percentage": 2.1,
-      "partyBudgets": []
+      "percentage": 1.4,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 19.3,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "culture",
       "name": "Kultur, medier, trossamfund och fritid",
       "description": "Kulturstöd, public service och idrott",
-      "percentage": 1.8,
-      "partyBudgets": []
+      "percentage": 1.2,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 16.6,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "foreign_affairs",
-      "name": "Utrikesförvaltning",
+      "name": "Internationell samverkan",
       "description": "Diplomati, utvecklingssamarbete och internationella organisationer",
-      "percentage": 1.5,
-      "partyBudgets": []
+      "percentage": 0.2,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 2.3,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "agriculture",
-      "name": "Jordbruk, skogsbruk och fiske",
+      "name": "Areella näringar, landsbygd och livsmedel",
       "description": "Lantbruksstöd, skogsbruk och fiskeripolitik",
-      "percentage": 1.2,
-      "partyBudgets": []
+      "percentage": 1.8,
+      "partyBudgets": [
+        {
+          "partyName": "Sverigedemokraterna (SD)",
+          "partyCode": "SD",
+          "budgetAmount": 24.0,
+          "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
+        }
+      ]
     },
     {
       "id": "energy",
