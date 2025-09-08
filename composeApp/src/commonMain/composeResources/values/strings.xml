@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation -->
+    <string name="nav_budget">Budget</string>
+    <string name="nav_back">← Tillbaka</string>
+    
+    <!-- Budget Screen -->
+    <string name="budget_title">Sveriges Budget 2025</string>
+    <string name="budget_subtitle">1 428 miljarder kronor fördelas över 27 olika utgiftsområden</string>
+    
+    <!-- Category Detail Screen -->
+    <string name="category_budget_percentage">Budget: %1$s%% av total budget</string>
+    <string name="parties_budget_proposals">Partiernas budgetförslag</string>
+    <string name="budget_proposal">Budgetförslag</string>
+    <string name="billion_kr">miljarder kr</string>
+    
+    <!-- Bar Chart -->
+    <string name="party_budget_proposal">Budgetförslag</string>
+    
+    <!-- No Data -->
+    <string name="no_budget_data_available">Inga budgetförslag tillgängliga för denna kategori ännu</string>
+    <string name="data_coming_soon">Data kommer snart när partierna publicerar sina budgetförslag</string>
+</resources>

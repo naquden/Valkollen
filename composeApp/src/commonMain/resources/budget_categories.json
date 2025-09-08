@@ -1,0 +1,50 @@
+{
+  "budgetCategories": [
+    {
+      "id": "municipal_grants",
+      "name": "Allmänna bidrag till kommuner",
+      "description": "Finansierar välfärdstjänster som skola, sjukvård och social omsorg",
+      "percentage": 13.3
+    },
+    {
+      "id": "sickness_benefits",
+      "name": "Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
+      "description": "Sjukförsäkring, ersättningar och stöd till personer med funktionsnedsättning",
+      "percentage": 9.9
+    },
+    {
+      "id": "healthcare",
+      "name": "Hälsovård, sjukvård och social omsorg",
+      "description": "Allmän hälso- och sjukvård samt social omsorg",
+      "percentage": 8.5
+    },
+    {
+      "id": "family_support",
+      "name": "Ekonomisk trygghet för familjer och barn",
+      "description": "Barnbidrag, föräldrapenning och andra familjestöd",
+      "percentage": 8.4
+    },
+    {
+      "id": "labor_market",
+      "name": "Arbetsmarknad och arbetsliv",
+      "description": "Arbetsmarknadspolitik, arbetsförmedling och arbetslivsutveckling",
+      "percentage": 7.3
+    },
+    {
+      "id": "education",
+      "name": "Utbildning och universitetsforskning",
+      "description": "Grundskola, gymnasium, universitet och forskning",
+      "percentage": 7.0
+    }
+  ],
+  "politicalParties": [
+    "Centerpartiet (C)",
+    "Kristdemokraterna (KD)",
+    "Liberalerna (L)",
+    "Miljöpartiet (MP)",
+    "Moderaterna (M)",
+    "Socialdemokraterna (S)",
+    "Sverigedemokraterna (SD)",
+    "Vänsterpartiet (V)"
+  ]
+}
