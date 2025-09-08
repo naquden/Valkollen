@@ -15,13 +15,17 @@ import se.atte.partier.screens.CategoryDetailScreen
 import se.atte.partier.screens.StartScreen
 import se.atte.partier.screens.IncomeScreen
 import se.atte.partier.screens.ByPartyScreen
+import se.atte.partier.screens.PartySelectionScreen
+import se.atte.partier.screens.PartyDetailScreen
 import se.atte.partier.screens.ViewType
 
 @Composable
 fun AnimatedNavigation(
     currentScreen: Screen,
     selectedCategory: BudgetCategory?,
+    selectedParty: String?,
     onCategoryClick: (BudgetCategory) -> Unit,
+    onPartySelected: (String) -> Unit,
     onBackClick: () -> Unit,
     onViewSelected: (ViewType) -> Unit,
     modifier: Modifier = Modifier
@@ -105,6 +109,20 @@ fun AnimatedNavigation(
                 }
                 Screen.ByParty -> {
                     ByPartyScreen(onBackClick = onBackClick)
+                }
+                Screen.PartySelection -> {
+                    PartySelectionScreen(
+                        onBackClick = onBackClick,
+                        onPartySelected = onPartySelected
+                    )
+                }
+                Screen.PartyDetail -> {
+                    selectedParty?.let { partyCode ->
+                        PartyDetailScreen(
+                            partyCode = partyCode,
+                            onBackClick = onBackClick
+                        )
+                    }
                 }
             }
         }

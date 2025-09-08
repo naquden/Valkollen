@@ -116,8 +116,8 @@ enum class ViewType(
     ),
     BY_PARTY(
         icon = "🏛️",
-        title = "Per parti",
-        description = "Jämför partiernas totala budgetförslag och prioriteringar"
+        title = "Specifik parti",
+        description = "Se varje partis budgetförslag i detalj"
     )
 }
 

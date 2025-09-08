@@ -21,7 +21,7 @@ fun UtgifterScreen(
     onCategoryClick: (BudgetCategory) -> Unit,
     onBackClick: () -> Unit
 ) {
-    val categories = remember { SampleData.budgetCategories }
+    val categories = remember { SampleData.budgetCategories.sortedBy { it.displayOrder } }
     val year = remember { SampleData.year }
     val totalBudget = remember { SampleData.totalBudget }
     

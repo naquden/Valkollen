@@ -9,6 +9,7 @@ import androidx.compose.material.icons.filled.TrendingUp
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import se.atte.partier.getPlatform
 import se.atte.partier.screens.ViewType
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -40,8 +41,12 @@ fun AppNavigation() {
             AnimatedNavigation(
                 currentScreen = currentScreen,
                 selectedCategory = selectedCategory,
+                selectedParty = navigationManager.selectedParty,
                 onCategoryClick = { category ->
                     navigationManager.navigateToCategory(category)
+                },
+                onPartySelected = { partyCode ->
+                    navigationManager.navigateToPartyDetail(partyCode)
                 },
                 onBackClick = {
                     navigationManager.navigateBack()
@@ -73,8 +78,12 @@ fun AppNavigation() {
             AnimatedNavigation(
                 currentScreen = currentScreen,
                 selectedCategory = selectedCategory,
+                selectedParty = navigationManager.selectedParty,
                 onCategoryClick = { category ->
                     navigationManager.navigateToCategory(category)
+                },
+                onPartySelected = { partyCode ->
+                    navigationManager.navigateToPartyDetail(partyCode)
                 },
                 onBackClick = {
                     navigationManager.navigateBack()
@@ -94,8 +103,12 @@ fun AppNavigation() {
         AnimatedNavigation(
             currentScreen = currentScreen,
             selectedCategory = selectedCategory,
+            selectedParty = navigationManager.selectedParty,
             onCategoryClick = { category ->
                 navigationManager.navigateToCategory(category)
+            },
+            onPartySelected = { partyCode ->
+                navigationManager.navigateToPartyDetail(partyCode)
             },
             onBackClick = {
                 navigationManager.navigateBack()
@@ -113,8 +126,8 @@ fun AppNavigation() {
 
 @Composable
 private fun isWebPlatform(): Boolean {
-    // For now, assume web platform - this can be improved with proper platform detection
-    return true
+    val platform = getPlatform()
+    return platform.name.contains("Web", ignoreCase = true)
 }
 
 sealed class Screen {
@@ -123,5 +136,7 @@ sealed class Screen {
     object Utgifter : Screen()
     object Income : Screen()
     object ByParty : Screen()
+    object PartySelection : Screen()
+    object PartyDetail : Screen()
     object CategoryDetail : Screen()
 }

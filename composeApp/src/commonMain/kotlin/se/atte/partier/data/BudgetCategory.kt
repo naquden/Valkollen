@@ -7,6 +7,7 @@ data class BudgetCategory(
     val id: String,
     val name: String,
     val description: String,
+    val displayOrder: Int,
     val partyBudgets: List<PartyBudget>
 )
 

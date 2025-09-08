@@ -23,7 +23,7 @@ fun IncomeScreen(
     onBackClick: () -> Unit,
     onCategoryClick: (BudgetCategory) -> Unit
 ) {
-    val incomeCategories = remember { SampleData.incomeCategoriesWithPercentages }
+    val incomeCategories = remember { SampleData.incomeCategoriesWithPercentages.sortedBy { it.displayOrder } }
     val year = remember { SampleData.year }
     val totalBudget = remember { SampleData.totalBudget }
     

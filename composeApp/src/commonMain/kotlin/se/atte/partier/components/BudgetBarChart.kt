@@ -22,6 +22,7 @@ import partier.composeapp.generated.resources.budget_proposal
 import partier.composeapp.generated.resources.billion_kr
 import se.atte.partier.utils.openUrl
 import se.atte.partier.data.PartyBudget
+import se.atte.partier.constants.PartyColors
 
 @Composable
 fun BudgetBarChart(
@@ -148,15 +149,5 @@ private fun BarChartItem(
 }
 
 private fun getPartyColor(partyName: String): Color {
-    return when {
-        partyName.contains("Moderaterna") -> Color(0xFF1E3A8A) // Dark Blue
-        partyName.contains("Kristdemokraterna") -> Color(0xFF3B82F6) // Blue
-        partyName.contains("Liberalerna") -> Color(0xFF60A5FA) // Light Blue
-        partyName.contains("Centerpartiet") -> Color(0xFF10B981) // Green
-        partyName.contains("Miljöpartiet") -> Color(0xFF059669) // Dark Green
-        partyName.contains("Vänsterpartiet") -> Color(0xFFDC2626) // Red
-        partyName.contains("Socialdemokraterna") -> Color(0xFFEF4444) // Light Red
-        partyName.contains("Sverigedemokraterna") -> Color(0xFFF59E0B) // Yellow/Orange
-        else -> Color(0xFF6B7280) // Gray fallback
-    }
+    return PartyColors.getColorByName(partyName)
 }
