@@ -1,20 +1,15 @@
 package se.atte.partier.navigation
 
 import androidx.compose.animation.*
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.*
-// Icons removed for now - will add back when needed
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountBalance
+import androidx.compose.material.icons.filled.People
+import androidx.compose.material.icons.filled.TrendingUp
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.unit.dp
-import org.jetbrains.compose.resources.stringResource
-import partier.composeapp.generated.resources.Res
-import partier.composeapp.generated.resources.nav_budget
-import se.atte.partier.data.BudgetCategory
-import se.atte.partier.screens.BudgetScreen
-import se.atte.partier.screens.CategoryDetailScreen
+import se.atte.partier.screens.ViewType
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -22,32 +17,27 @@ fun AppNavigation() {
     val navigationManager = rememberNavigationManager()
     val currentScreen = navigationManager.currentScreen
     val selectedCategory = navigationManager.selectedCategory
-    
     val isWeb = isWebPlatform()
     
-    if (isWeb) {
-        // Web layout with top navigation
+    // Always show navigation bar (except on Start screen)
+    val showNavigationBar = currentScreen != Screen.Start
+    
+    if (isWeb && showNavigationBar) {
+        // Web layout with NavigationRail
         Row(modifier = Modifier.fillMaxSize()) {
-            // Top navigation bar for web
-            Column(modifier = Modifier.fillMaxHeight()) {
-                NavigationRail(
-                    modifier = Modifier.fillMaxHeight(),
-                    containerColor = MaterialTheme.colorScheme.surface
-                ) {
-                    NavigationRailItem(
-                        icon = { Text("💰") },
-                        label = { Text(stringResource(Res.string.nav_budget)) },
-                        selected = currentScreen == Screen.Budget,
-                        onClick = { 
-                            navigationManager.navigateToBudget()
-                        }
-                    )
-                }
+            NavigationRail(
+                modifier = Modifier.fillMaxHeight(),
+                containerColor = MaterialTheme.colorScheme.surface
+            ) {
+                NavigationRailItem(
+                    icon = { Icon(Icons.Filled.AccountBalance, contentDescription = "Budget") },
+                    label = { Text("Budget") },
+                    selected = currentScreen in listOf(Screen.Budget, Screen.Income, Screen.ByParty, Screen.CategoryDetail),
+                    onClick = { navigationManager.navigateToBudget() }
+                )
             }
             
-            // Main content area
             AnimatedNavigation(
-                modifier = Modifier.fillMaxSize(),
                 currentScreen = currentScreen,
                 selectedCategory = selectedCategory,
                 onCategoryClick = { category ->
@@ -56,20 +46,26 @@ fun AppNavigation() {
                 onBackClick = {
                     navigationManager.navigateBack()
                 },
+                onViewSelected = { viewType ->
+                    when (viewType) {
+                        ViewType.EXPENSES -> navigationManager.navigateToUtgifter()
+                        ViewType.INCOME -> navigationManager.navigateToIncome()
+                        ViewType.BY_PARTY -> navigationManager.navigateToByParty()
+                    }
+                },
+                modifier = Modifier.weight(1f)
             )
         }
-    } else {
-        // Mobile layout with bottom navigation
+    } else if (!isWeb && showNavigationBar) {
+        // Mobile layout with NavigationBar
         Scaffold(
             bottomBar = {
                 NavigationBar {
                     NavigationBarItem(
-                        icon = { Text("💰") },
-                        label = { Text(stringResource(Res.string.nav_budget)) },
-                        selected = currentScreen == Screen.Budget,
-                        onClick = { 
-                            navigationManager.navigateToBudget()
-                        }
+                        icon = { Icon(Icons.Filled.AccountBalance, contentDescription = "Budget") },
+                        label = { Text("Budget") },
+                        selected = currentScreen in listOf(Screen.Budget, Screen.Income, Screen.ByParty, Screen.CategoryDetail),
+                        onClick = { navigationManager.navigateToBudget() }
                     )
                 }
             }
@@ -83,11 +79,35 @@ fun AppNavigation() {
                 onBackClick = {
                     navigationManager.navigateBack()
                 },
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(paddingValues)
+                onViewSelected = { viewType ->
+                    when (viewType) {
+                        ViewType.EXPENSES -> navigationManager.navigateToUtgifter()
+                        ViewType.INCOME -> navigationManager.navigateToIncome()
+                        ViewType.BY_PARTY -> navigationManager.navigateToByParty()
+                    }
+                },
+                modifier = Modifier.padding(paddingValues)
             )
         }
+    } else {
+        // No navigation bar (Start screen or CategoryDetail)
+        AnimatedNavigation(
+            currentScreen = currentScreen,
+            selectedCategory = selectedCategory,
+            onCategoryClick = { category ->
+                navigationManager.navigateToCategory(category)
+            },
+            onBackClick = {
+                navigationManager.navigateBack()
+            },
+            onViewSelected = { viewType ->
+                when (viewType) {
+                    ViewType.EXPENSES -> navigationManager.navigateToUtgifter()
+                    ViewType.INCOME -> navigationManager.navigateToIncome()
+                    ViewType.BY_PARTY -> navigationManager.navigateToByParty()
+                }
+            }
+        )
     }
 }
 
@@ -98,6 +118,10 @@ private fun isWebPlatform(): Boolean {
 }
 
 sealed class Screen {
+    object Start : Screen()
     object Budget : Screen()
+    object Utgifter : Screen()
+    object Income : Screen()
+    object ByParty : Screen()
     object CategoryDetail : Screen()
 }

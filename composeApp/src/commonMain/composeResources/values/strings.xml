@@ -9,7 +9,6 @@
     <string name="budget_subtitle">1 428 miljarder kronor fördelas över 27 olika utgiftsområden</string>
     
     <!-- Category Detail Screen -->
-    <string name="category_budget_percentage">Budget: %1$s%% av total budget</string>
     <string name="parties_budget_proposals">Partiernas budgetförslag</string>
     <string name="budget_proposal">Budgetförslag</string>
     <string name="billion_kr">miljarder kr</string>

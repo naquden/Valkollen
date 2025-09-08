@@ -10,7 +10,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import se.atte.partier.data.BudgetCategory
 import se.atte.partier.screens.BudgetScreen
+import se.atte.partier.screens.UtgifterScreen
 import se.atte.partier.screens.CategoryDetailScreen
+import se.atte.partier.screens.StartScreen
+import se.atte.partier.screens.IncomeScreen
+import se.atte.partier.screens.ByPartyScreen
+import se.atte.partier.screens.ViewType
 
 @Composable
 fun AnimatedNavigation(
@@ -18,6 +23,7 @@ fun AnimatedNavigation(
     selectedCategory: BudgetCategory?,
     onCategoryClick: (BudgetCategory) -> Unit,
     onBackClick: () -> Unit,
+    onViewSelected: (ViewType) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Box(
@@ -67,8 +73,21 @@ fun AnimatedNavigation(
             modifier = Modifier.fillMaxSize()
         ) { screen ->
             when (screen) {
+                Screen.Start -> {
+                    StartScreen(onViewSelected = onViewSelected)
+                }
                 Screen.Budget -> {
-                    BudgetScreen(onCategoryClick = onCategoryClick)
+                    BudgetScreen(
+                        onCategoryClick = onCategoryClick,
+                        onBackClick = onBackClick,
+                        onViewSelected = onViewSelected
+                    )
+                }
+                Screen.Utgifter -> {
+                    UtgifterScreen(
+                        onCategoryClick = onCategoryClick,
+                        onBackClick = onBackClick
+                    )
                 }
                 Screen.CategoryDetail -> {
                     selectedCategory?.let { category ->
@@ -77,6 +96,15 @@ fun AnimatedNavigation(
                             onBackClick = onBackClick
                         )
                     }
+                }
+                Screen.Income -> {
+                    IncomeScreen(
+                        onBackClick = onBackClick,
+                        onCategoryClick = onCategoryClick
+                    )
+                }
+                Screen.ByParty -> {
+                    ByPartyScreen(onBackClick = onBackClick)
                 }
             }
         }

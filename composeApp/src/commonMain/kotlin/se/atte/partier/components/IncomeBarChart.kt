@@ -12,39 +12,30 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.jetbrains.compose.resources.stringResource
-import partier.composeapp.generated.resources.Res
-import partier.composeapp.generated.resources.budget_proposal
-import partier.composeapp.generated.resources.billion_kr
 import se.atte.partier.utils.openUrl
-import se.atte.partier.data.PartyBudget
+import se.atte.partier.data.IncomeType
 
 @Composable
-fun BudgetBarChart(
-    partyBudgets: List<PartyBudget>,
+fun IncomeBarChart(
+    incomeTypes: List<IncomeType>,
     modifier: Modifier = Modifier
 ) {
-    if (partyBudgets.isEmpty()) return
+    if (incomeTypes.isEmpty()) return
     
-    val maxBudget = partyBudgets.maxOfOrNull { it.budgetAmount } ?: 0.0
-    val minBudget = partyBudgets.minOfOrNull { it.budgetAmount } ?: 0.0
-    val budgetRange = maxBudget - minBudget
+    val maxAmount = incomeTypes.maxOfOrNull { kotlin.math.abs(it.amount) } ?: 0.0
     
     LazyColumn(
         modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        itemsIndexed(partyBudgets) { index, partyBudget ->
-            BarChartItem(
-                partyBudget = partyBudget,
-                maxBudget = maxBudget,
-                minBudget = minBudget,
-                budgetRange = budgetRange,
-                color = getPartyColor(partyBudget.partyName),
+        itemsIndexed(incomeTypes) { index, incomeType ->
+            IncomeBarChartItem(
+                incomeType = incomeType,
+                maxAmount = maxAmount,
+                color = getIncomeTypeColor(incomeType.id),
                 modifier = Modifier.fillMaxWidth()
             )
         }
@@ -52,28 +43,24 @@ fun BudgetBarChart(
 }
 
 @Composable
-private fun BarChartItem(
-    partyBudget: PartyBudget,
-    maxBudget: Double,
-    minBudget: Double,
-    budgetRange: Double,
+private fun IncomeBarChartItem(
+    incomeType: IncomeType,
+    maxAmount: Double,
     color: Color,
     modifier: Modifier = Modifier
 ) {
-    // Use absolute values instead of normalized to ensure all bars are visible
-    val normalizedValue = if (maxBudget > 0) {
-        kotlin.math.abs(partyBudget.budgetAmount) / maxBudget
+    val normalizedValue = if (maxAmount > 0) {
+        kotlin.math.abs(incomeType.amount) / maxAmount
     } else 1.0
     
     Card(
-        modifier = modifier
-            .clickable { openUrl(partyBudget.sourceUrl) },
+        modifier = modifier,
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(
             modifier = Modifier.padding(16.dp)
         ) {
-            // Party name and amount
+            // Income type name and amount
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -81,12 +68,12 @@ private fun BarChartItem(
             ) {
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
-                        text = partyBudget.partyName,
+                        text = incomeType.name,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Medium
                     )
                     Text(
-                        text = stringResource(Res.string.budget_proposal) + " (Klicka för källa)",
+                        text = incomeType.description,
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -97,14 +84,15 @@ private fun BarChartItem(
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
                     Text(
-                        text = "${(partyBudget.budgetAmount * 10).toInt() / 10.0} ${stringResource(Res.string.billion_kr)}",
+                        text = "${if (incomeType.amount >= 0) "+" else ""}${(incomeType.amount * 10).toInt() / 10.0} miljarder kr",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.primary
+                        color = if (incomeType.amount >= 0) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error
                     )
                     Text(
-                        text = "🔗",
-                        style = MaterialTheme.typography.bodySmall
+                        text = "(${if (incomeType.percentage >= 0) "+" else ""}${(incomeType.percentage * 10).toInt() / 10.0}%)",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
@@ -136,27 +124,22 @@ private fun BarChartItem(
                         topLeft = Offset.Zero,
                         size = Size(barWidth, barHeight)
                     )
-                    
-                    // Value text on the bar (simplified for cross-platform)
-                    if (barWidth > 60) { // Only show text if bar is wide enough
-                        // Text will be handled by Compose Text component instead
-                    }
                 }
             }
         }
     }
 }
 
-private fun getPartyColor(partyName: String): Color {
-    return when {
-        partyName.contains("Moderaterna") -> Color(0xFF1E3A8A) // Dark Blue
-        partyName.contains("Kristdemokraterna") -> Color(0xFF3B82F6) // Blue
-        partyName.contains("Liberalerna") -> Color(0xFF60A5FA) // Light Blue
-        partyName.contains("Centerpartiet") -> Color(0xFF10B981) // Green
-        partyName.contains("Miljöpartiet") -> Color(0xFF059669) // Dark Green
-        partyName.contains("Vänsterpartiet") -> Color(0xFFDC2626) // Red
-        partyName.contains("Socialdemokraterna") -> Color(0xFFEF4444) // Light Red
-        partyName.contains("Sverigedemokraterna") -> Color(0xFFF59E0B) // Yellow/Orange
+private fun getIncomeTypeColor(incomeTypeId: String): Color {
+    return when (incomeTypeId) {
+        "tax_income" -> Color(0xFF1E40AF) // Blue
+        "activity_income" -> Color(0xFF059669) // Green
+        "property_sales" -> Color(0xFF7C3AED) // Purple
+        "loan_repayments" -> Color(0xFF0891B2) // Cyan
+        "calculated_income" -> Color(0xFFCA8A04) // Yellow
+        "eu_grants" -> Color(0xFFDC2626) // Red
+        "tax_system_adjustments" -> Color(0xFFEF4444) // Light Red
         else -> Color(0xFF6B7280) // Gray fallback
     }
 }
+

@@ -16,7 +16,6 @@ import org.jetbrains.compose.resources.stringResource
 import partier.composeapp.generated.resources.Res
 import partier.composeapp.generated.resources.budget_proposal
 import partier.composeapp.generated.resources.billion_kr
-import partier.composeapp.generated.resources.category_budget_percentage
 import partier.composeapp.generated.resources.nav_back
 import partier.composeapp.generated.resources.parties_budget_proposals
 import se.atte.partier.data.BudgetCategory
@@ -66,15 +65,6 @@ fun CategoryDetailScreen(
                 Column(
                     modifier = Modifier.padding(16.dp)
                 ) {
-                    Text(
-                        text = stringResource(Res.string.category_budget_percentage, category.percentage.toString()),
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onPrimaryContainer
-                    )
-                    
-                    Spacer(modifier = Modifier.height(8.dp))
-                    
                     Text(
                         text = category.description,
                         style = MaterialTheme.typography.bodyMedium,

@@ -11,21 +11,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import org.jetbrains.compose.resources.stringResource
-import partier.composeapp.generated.resources.Res
-import partier.composeapp.generated.resources.budget_subtitle
-import partier.composeapp.generated.resources.budget_title
 import se.atte.partier.data.BudgetCategory
 import se.atte.partier.data.SampleData
 import se.atte.partier.utils.openUrl
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun BudgetScreen(
+fun UtgifterScreen(
     onCategoryClick: (BudgetCategory) -> Unit,
-    onBackClick: () -> Unit,
-    onViewSelected: (ViewType) -> Unit
+    onBackClick: () -> Unit
 ) {
+    val categories = remember { SampleData.budgetCategories }
     val year = remember { SampleData.year }
     val totalBudget = remember { SampleData.totalBudget }
     
@@ -36,7 +32,7 @@ fun BudgetScreen(
         TopAppBar(
             title = { 
                 Text(
-                    text = "Budget $year",
+                    text = "Utgifter $year",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.SemiBold
                 )
@@ -62,23 +58,39 @@ fun BudgetScreen(
         
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.padding(bottom = 32.dp)
+                modifier = Modifier.padding(bottom = 24.dp)
             ) {
                 Text(
-                    text = "${totalBudget.toInt()} miljarder kronor fördelas över olika områden",
+                    text = "${totalBudget.toInt()} miljarder kronor fördelas över ${categories.size} olika utgiftsområden",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
+                Spacer(modifier = Modifier.width(8.dp))
+                Surface(
+                    color = MaterialTheme.colorScheme.primaryContainer,
+                    shape = MaterialTheme.shapes.small,
+                    modifier = Modifier
+                        .clickable { 
+                            openUrl("https://www.regeringen.se/regeringens-politik/budget/")
+                        }
+                        .padding(horizontal = 8.dp, vertical = 4.dp)
+                ) {
+                    Text(
+                        text = "🔗 Källa",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onPrimaryContainer,
+                        modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)
+                    )
+                }
             }
-
-            // Sub-navigation options
+            
             LazyColumn(
-                verticalArrangement = Arrangement.spacedBy(16.dp)
+                verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                items(ViewType.values()) { viewType ->
-                    ViewOptionCard(
-                        viewType = viewType,
-                        onClick = { onViewSelected(viewType) }
+                items(categories) { category ->
+                    BudgetCategoryCard(
+                        category = category,
+                        onClick = { onCategoryClick(category) }
                     )
                 }
             }
@@ -127,40 +139,3 @@ private fun BudgetCategoryCard(
     }
 }
 
-@Composable
-private fun ViewOptionCard(
-    viewType: ViewType,
-    onClick: () -> Unit
-) {
-    Card(
-        onClick = onClick,
-        modifier = Modifier.fillMaxWidth(),
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
-    ) {
-        Column(
-            modifier = Modifier.padding(24.dp)
-        ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.padding(bottom = 8.dp)
-            ) {
-                Text(
-                    text = viewType.icon,
-                    style = MaterialTheme.typography.headlineMedium,
-                    modifier = Modifier.padding(end = 16.dp)
-                )
-                Text(
-                    text = viewType.title,
-                    style = MaterialTheme.typography.headlineSmall,
-                    fontWeight = FontWeight.Bold
-                )
-            }
-            
-            Text(
-                text = viewType.description,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-    }
-}
