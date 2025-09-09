@@ -1,13 +1,27 @@
 package se.atte.partier.screens
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.TopAppBar
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
@@ -15,8 +29,9 @@ import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.stringResource
 import partier.composeapp.generated.resources.Res
 import partier.composeapp.generated.resources.nav_back
-import se.atte.partier.data.SampleData
-import se.atte.partier.constants.PartyColors
+import se.atte.partier.components.CommonCard
+import se.atte.partier.components.standardPaddingMedium
+import se.atte.partier.components.standardPaddingSmall
 import se.atte.partier.constants.Party
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -25,18 +40,12 @@ fun PartySelectionScreen(
     onBackClick: () -> Unit,
     onPartySelected: (String) -> Unit
 ) {
-    val parties = listOf(
-        Party.SD,
-        Party.M,
-        Party.MP
-    )
-    
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
         // Top App Bar
         TopAppBar(
-            title = { 
+            title = {
                 Text(
                     text = "Specifik parti",
                     style = MaterialTheme.typography.titleLarge,
@@ -49,21 +58,18 @@ fun PartySelectionScreen(
                 }
             }
         )
-        
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp)
+                .padding(standardPaddingMedium)
         ) {
             // Header
-            Card(
+            CommonCard(
                 modifier = Modifier.fillMaxWidth(),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer
-                )
             ) {
                 Column(
-                    modifier = Modifier.padding(16.dp)
+                    modifier = Modifier.padding(standardPaddingMedium)
                 ) {
                     Text(
                         text = "Välj parti",
@@ -71,9 +77,9 @@ fun PartySelectionScreen(
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onPrimaryContainer
                     )
-                    
-                    Spacer(modifier = Modifier.height(8.dp))
-                    
+
+                    Spacer(modifier = Modifier.height(standardPaddingSmall))
+
                     Text(
                         text = "Se varje partis detaljerade budgetförslag med utgifter och inkomster",
                         style = MaterialTheme.typography.bodyMedium,
@@ -81,14 +87,14 @@ fun PartySelectionScreen(
                     )
                 }
             }
-            
+
             Spacer(modifier = Modifier.height(24.dp))
-            
+
             // Party List
             LazyColumn(
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                items(parties) { party ->
+                items(Party.entries.toTypedArray()) { party ->
                     PartyCard(
                         partyName = party.displayName,
                         partyCode = party.code,
@@ -106,14 +112,10 @@ private fun PartyCard(
     partyCode: String,
     onClick: () -> Unit
 ) {
-    Card(
+    CommonCard(
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onClick() },
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surface
-        ),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Row(
             modifier = Modifier
@@ -125,7 +127,7 @@ private fun PartyCard(
             Surface(
                 modifier = Modifier.size(48.dp),
                 shape = RoundedCornerShape(8.dp),
-                color = getPartyColor(partyCode)
+                color = Party.getColorByCode(partyCode),
             ) {
                 Box(
                     modifier = Modifier.fillMaxSize(),
@@ -139,9 +141,9 @@ private fun PartyCard(
                     )
                 }
             }
-            
-            Spacer(modifier = Modifier.width(16.dp))
-            
+
+            Spacer(modifier = Modifier.width(standardPaddingMedium))
+
             // Party info
             Column(
                 modifier = Modifier.weight(1f)
@@ -151,16 +153,16 @@ private fun PartyCard(
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold
                 )
-                
+
                 Spacer(modifier = Modifier.height(4.dp))
-                
+
                 Text(
                     text = "Klicka för att se detaljerad budget",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
-            
+
             // Arrow indicator
             Text(
                 text = "→",
@@ -169,8 +171,4 @@ private fun PartyCard(
             )
         }
     }
-}
-
-private fun getPartyColor(partyCode: String): androidx.compose.ui.graphics.Color {
-    return PartyColors.getColorByCode(partyCode)
 }

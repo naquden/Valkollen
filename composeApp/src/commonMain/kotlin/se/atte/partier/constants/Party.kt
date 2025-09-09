@@ -20,7 +20,7 @@ enum class Party(
     MP(
         code = "MP",
         displayName = "Miljöpartiet (MP)",
-        color = Color(0xFF059669) // Dark Green
+        color = Color(0xFF4AE53F) // Miljöpartiet Green
     ),
     S(
         code = "S",
@@ -30,7 +30,7 @@ enum class Party(
     C(
         code = "C",
         displayName = "Centerpartiet (C)",
-        color = Color(0xFF10B981) // Green
+        color = Color(0xFF255821) // Centerpartiet Green
     ),
     L(
         code = "L",
@@ -47,54 +47,17 @@ enum class Party(
         displayName = "Vänsterpartiet (V)",
         color = Color(0xFFDC2626) // Red
     );
-    
+
     companion object {
         // Fallback color for unknown parties
-        val DEFAULT_COLOR = Color(0xFF6750A4) // Purple
-        
-        /**
-         * Get party by code
-         */
+        val DEFAULT_COLOR = Color(0x000000) // Black
+
         fun fromCode(code: String): Party? {
-            return values().find { it.code.equals(code, ignoreCase = true) }
+            return entries.find { it.code.equals(code, ignoreCase = true) }
         }
-        
-        /**
-         * Get party by display name (supports partial matching)
-         */
-        fun fromDisplayName(displayName: String): Party? {
-            return values().find { 
-                displayName.contains(it.displayName.split(" ")[0], ignoreCase = true) ||
-                displayName.contains(it.code, ignoreCase = true)
-            }
-        }
-        
-        /**
-         * Get all available parties
-         */
-        fun getAllParties(): List<Party> {
-            return values().toList()
-        }
-        
-        /**
-         * Get all party codes
-         */
-        fun getAllCodes(): List<String> {
-            return values().map { it.code }
-        }
-        
-        /**
-         * Get all display names
-         */
-        fun getAllDisplayNames(): List<String> {
-            return values().map { it.displayName }
-        }
-        
-        /**
-         * Check if a code is valid
-         */
-        fun isValidCode(code: String): Boolean {
-            return fromCode(code) != null
+
+        fun getColorByCode(partyCode: String): Color {
+            return Party.fromCode(partyCode)?.color ?: Party.DEFAULT_COLOR
         }
     }
 }

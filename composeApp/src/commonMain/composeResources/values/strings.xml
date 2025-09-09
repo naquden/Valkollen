@@ -10,7 +10,7 @@
     
     <!-- Category Detail Screen -->
     <string name="parties_budget_proposals">Partiernas budgetförslag</string>
-    <string name="budget_proposal">Budgetförslag</string>
+    <string name="budget_proposal">Klicka på varje parti's budgetförslag för källa</string>
     <string name="billion_kr">miljarder kr</string>
     
     <!-- Bar Chart -->

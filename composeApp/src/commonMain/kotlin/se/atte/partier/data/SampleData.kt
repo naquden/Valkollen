@@ -5,9 +5,6 @@ object SampleData {
     
     val budgetCategories: List<BudgetCategory>
         get() = budgetData.budgetCategories
-    
-    val politicalParties: List<String>
-        get() = budgetData.politicalParties
 
     val year: Int
         get() = budgetData.year
@@ -17,24 +14,24 @@ object SampleData {
 
     val incomeCategories: List<BudgetCategory>
         get() = budgetData.incomeCategories
-    
-    // Get income categories (no percentages needed for income)
-    val incomeCategoriesWithPercentages: List<BudgetCategory>
-        get() = budgetData.incomeCategories
-    
-    fun getPartyBudgetsForCategory(categoryId: String): List<PartyBudget> {
+
+    fun getCategoryById(categoryId: String): BudgetCategory? {
         // First try budget categories
         val budgetCategory = budgetCategories.find { it.id == categoryId }
         if (budgetCategory != null) {
-            return budgetCategory.partyBudgets
+            return budgetCategory
         }
-        
+
         // Then try income categories
         val incomeCategory = incomeCategories.find { it.id == categoryId }
         if (incomeCategory != null) {
-            return incomeCategory.partyBudgets
+            return incomeCategory
         }
-        
-        return emptyList()
+
+        return null
+    }
+
+    fun getPartyBudgetsForCategory(categoryId: String): List<PartyBudget> {
+        return getCategoryById(categoryId)?.partyBudgets ?: emptyList()
     }
 }

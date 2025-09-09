@@ -13,25 +13,21 @@ object BudgetDataJson {
       "displayOrder": 1,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 19.1,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 20.1,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 20.3,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 19.6,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -45,25 +41,21 @@ object BudgetDataJson {
       "displayOrder": 2,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 20.9,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 21.7,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 21.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 21.7,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -77,25 +69,21 @@ object BudgetDataJson {
       "displayOrder": 3,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 16.9,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 14.8,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 14.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 14.6,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -109,25 +97,21 @@ object BudgetDataJson {
       "displayOrder": 25,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 174.3,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 173.1,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 174.1,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 178.4,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -141,25 +125,21 @@ object BudgetDataJson {
       "displayOrder": 10,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 116.9,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 123.1,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 123.1,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 122.3,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -173,25 +153,21 @@ object BudgetDataJson {
       "displayOrder": 9,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 110.3,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 120.3,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 132.5,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 120.6,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -205,25 +181,21 @@ object BudgetDataJson {
       "displayOrder": 12,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 106.1,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 104.5,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 104.5,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 103.2,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -237,25 +209,21 @@ object BudgetDataJson {
       "displayOrder": 11,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 60.3,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 62.9,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 62.9,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 62.9,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -269,25 +237,21 @@ object BudgetDataJson {
       "displayOrder": 13,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 4.0,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 6.3,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 9.3,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 6.8,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -301,25 +265,21 @@ object BudgetDataJson {
       "displayOrder": 14,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 92.1,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 93.5,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 95.5,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 78.1,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -333,25 +293,21 @@ object BudgetDataJson {
       "displayOrder": 15,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 30.5,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 33.8,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 36.1,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 33.7,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -365,25 +321,21 @@ object BudgetDataJson {
       "displayOrder": 16,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 99.5,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 103.8,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 109.3,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 108.9,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -397,25 +349,21 @@ object BudgetDataJson {
       "displayOrder": 7,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 48.6,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 44.5,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 57.0,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 46.2,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -429,25 +377,21 @@ object BudgetDataJson {
       "displayOrder": 8,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 13.8,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 11.9,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 12.3,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 11.8,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -461,25 +405,21 @@ object BudgetDataJson {
       "displayOrder": 6,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 126.1,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 169.7,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 170.6,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 170.0,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -493,25 +433,21 @@ object BudgetDataJson {
       "displayOrder": 4,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 76.0,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 86.8,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 88.4,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 87.2,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -525,25 +461,21 @@ object BudgetDataJson {
       "displayOrder": 22,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 82.9,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 94.4,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 133.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 95.4,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -557,25 +489,21 @@ object BudgetDataJson {
       "displayOrder": 20,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 19.3,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 16.4,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 40.6,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 21.4,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -589,25 +517,21 @@ object BudgetDataJson {
       "displayOrder": 17,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 16.6,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 16.9,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 19.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 17.6,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -621,25 +545,21 @@ object BudgetDataJson {
       "displayOrder": 5,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 2.3,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 2.3,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 2.4,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 2.3,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -653,25 +573,21 @@ object BudgetDataJson {
       "displayOrder": 23,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 24.0,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 21.7,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 25.4,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 22.0,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -685,25 +601,21 @@ object BudgetDataJson {
       "displayOrder": 24,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 9.6,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 8.3,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 8.7,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 8.3,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -717,25 +629,21 @@ object BudgetDataJson {
       "displayOrder": 21,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 5.6,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 6.6,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 20.0,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 7.0,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -749,25 +657,21 @@ object BudgetDataJson {
       "displayOrder": 18,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 6.1,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 3.2,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 13.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 3.3,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -781,25 +685,21 @@ object BudgetDataJson {
       "displayOrder": 19,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 3.9,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 4.3,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 4.4,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 4.3,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -813,25 +713,21 @@ object BudgetDataJson {
       "displayOrder": 26,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 20.5,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 28.8,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 28.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 28.8,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -845,41 +741,27 @@ object BudgetDataJson {
       "displayOrder": 27,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 40.8,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 47.8,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 47.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 47.8,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     }
-  ],
-  "politicalParties": [
-    "Centerpartiet (C)",
-    "Kristdemokraterna (KD)",
-    "Liberalerna (L)",
-    "Miljöpartiet (MP)",
-    "Moderaterna (M)",
-    "Socialdemokraterna (S)",
-    "Sverigedemokraterna (SD)",
-    "Vänsterpartiet (V)"
   ],
   "incomeCategories": [
     {
@@ -889,25 +771,21 @@ object BudgetDataJson {
       "displayOrder": 1,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 1344.97,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 1402.15,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 2735.5,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 1407.4,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -921,25 +799,21 @@ object BudgetDataJson {
       "displayOrder": 2,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 47.89,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 47.84,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 47.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 48.3,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -953,25 +827,21 @@ object BudgetDataJson {
       "displayOrder": 3,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 5.0,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 5.0,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 5.0,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 5.0,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -985,25 +855,21 @@ object BudgetDataJson {
       "displayOrder": 4,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 0.61,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 0.56,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 0.6,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 0.6,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -1017,25 +883,21 @@ object BudgetDataJson {
       "displayOrder": 5,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 22.16,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 23.92,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 24.0,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 23.9,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -1049,25 +911,21 @@ object BudgetDataJson {
       "displayOrder": 6,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 48.67,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 48.77,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 48.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 48.8,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -1081,25 +939,21 @@ object BudgetDataJson {
       "displayOrder": 7,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": -145.05,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": -154.37,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": -150.0,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": -154.4,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
@@ -1113,25 +967,21 @@ object BudgetDataJson {
       "displayOrder": 8,
       "partyBudgets": [
         {
-          "partyName": "Sverigedemokraterna (SD)",
           "partyCode": "SD",
           "budgetAmount": 0.0,
           "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf"
         },
         {
-          "partyName": "Moderaterna (M)",
           "partyCode": "M",
           "budgetAmount": 0.0,
           "sourceUrl": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf"
         },
         {
-          "partyName": "Miljöpartiet (MP)",
           "partyCode": "MP",
           "budgetAmount": 0.0,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
         },
         {
-          "partyName": "Centerpartiet (C)",
           "partyCode": "C",
           "budgetAmount": 0.0,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"

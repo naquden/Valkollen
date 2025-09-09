@@ -13,7 +13,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import se.atte.partier.constants.PartyColors
 import se.atte.partier.constants.Party
 import se.atte.partier.data.SampleData
 
@@ -23,18 +22,17 @@ fun PartyComparisonDialog(
     onDismiss: () -> Unit
 ) {
     var selectedPartyCode by remember { mutableStateOf<String?>(null) }
-    
+
     Dialog(
         onDismissRequest = onDismiss,
         properties = DialogProperties(
             usePlatformDefaultWidth = false
         )
     ) {
-        Card(
+        CommonCard(
             modifier = Modifier
                 .fillMaxWidth(0.95f)
                 .fillMaxHeight(0.9f),
-            shape = RoundedCornerShape(16.dp)
         ) {
             Column(
                 modifier = Modifier.fillMaxSize()
@@ -43,7 +41,7 @@ fun PartyComparisonDialog(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(16.dp),
+                        .padding(standardPaddingMedium),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -52,7 +50,7 @@ fun PartyComparisonDialog(
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold
                     )
-                    
+
                     Row {
                         if (selectedPartyCode != null) {
                             TextButton(
@@ -61,15 +59,15 @@ fun PartyComparisonDialog(
                                 Text("← Tillbaka")
                             }
                         }
-                        
+
                         TextButton(onClick = onDismiss) {
                             Text("Stäng")
                         }
                     }
                 }
-                
+
                 HorizontalDivider()
-                
+
                 // Content
                 if (selectedPartyCode == null) {
                     PartySelectionView(
@@ -94,19 +92,13 @@ private fun PartySelectionView(
     currentPartyCode: String,
     onPartySelected: (String) -> Unit
 ) {
-    val availableParties = listOf(
-        Party.SD,
-        Party.M,
-        Party.MP
-    ).filter { it.code != currentPartyCode }
-    
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+            .padding(standardPaddingMedium),
+        verticalArrangement = Arrangement.spacedBy(standardPaddingMedium)
     ) {
-        items(availableParties) { party ->
+        items(Party.entries.filter { it.code != currentPartyCode }) { party ->
             PartySelectionCard(
                 partyCode = party.code,
                 partyName = party.displayName,
@@ -122,26 +114,22 @@ private fun PartySelectionCard(
     partyName: String,
     onClick: () -> Unit
 ) {
-    Card(
+    CommonCard(
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onClick() },
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surface
-        ),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp),
+                .padding(standardPaddingMedium),
             verticalAlignment = Alignment.CenterVertically
         ) {
             // Party color indicator
             Surface(
                 modifier = Modifier.size(48.dp),
                 shape = RoundedCornerShape(8.dp),
-                color = PartyColors.getColorByCode(partyCode)
+                color = Party.getColorByCode(partyCode)
             ) {
                 Box(
                     modifier = Modifier.fillMaxSize(),
@@ -155,9 +143,9 @@ private fun PartySelectionCard(
                     )
                 }
             }
-            
+
             Spacer(modifier = Modifier.width(16.dp))
-            
+
             // Party info
             Column(
                 modifier = Modifier.weight(1f)
@@ -167,14 +155,14 @@ private fun PartySelectionCard(
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold
                 )
-                
+
                 Text(
                     text = "Klicka för att jämföra budget",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
-            
+
             // Arrow indicator
             Text(
                 text = "→",
@@ -191,35 +179,45 @@ private fun BudgetComparisonView(
     comparePartyCode: String
 ) {
     val currentPartyName = Party.fromCode(currentPartyCode)?.displayName ?: "Okänt parti"
-    
+
     val comparePartyName = Party.fromCode(comparePartyCode)?.displayName ?: "Okänt parti"
-    
+
     // Get budget data for both parties
     val currentBudgetData = remember(currentPartyCode) {
         SampleData.budgetCategories.sortedBy { it.displayOrder }.mapNotNull { category ->
             val partyBudget = category.partyBudgets.find { it.partyCode == currentPartyCode }
             if (partyBudget != null && partyBudget.budgetAmount > 0) {
-                partyBudget.copy(partyName = category.name)
+                ComparisonBudgetItem(
+                    partyCode = partyBudget.partyCode,
+                    budgetAmount = partyBudget.budgetAmount,
+                    sourceUrl = partyBudget.sourceUrl,
+                    categoryName = category.name
+                )
             } else null
         }
     }
-    
+
     val compareBudgetData = remember(comparePartyCode) {
         SampleData.budgetCategories.sortedBy { it.displayOrder }.mapNotNull { category ->
             val partyBudget = category.partyBudgets.find { it.partyCode == comparePartyCode }
             if (partyBudget != null && partyBudget.budgetAmount > 0) {
-                partyBudget.copy(partyName = category.name)
+                ComparisonBudgetItem(
+                    partyCode = partyBudget.partyCode,
+                    budgetAmount = partyBudget.budgetAmount,
+                    sourceUrl = partyBudget.sourceUrl,
+                    categoryName = category.name
+                )
             } else null
         }
     }
-    
+
     // Create comparison data
     val comparisonData = remember(currentBudgetData, compareBudgetData) {
-        val allCategories = (currentBudgetData.map { it.partyName } + compareBudgetData.map { it.partyName }).distinct()
+        val allCategories = (currentBudgetData.map { it.categoryName } + compareBudgetData.map { it.categoryName }).distinct()
         allCategories.mapNotNull { categoryName ->
-            val currentAmount = currentBudgetData.find { it.partyName == categoryName }?.budgetAmount ?: 0.0
-            val compareAmount = compareBudgetData.find { it.partyName == categoryName }?.budgetAmount ?: 0.0
-            
+            val currentAmount = currentBudgetData.find { it.categoryName == categoryName }?.budgetAmount ?: 0.0
+            val compareAmount = compareBudgetData.find { it.categoryName == categoryName }?.budgetAmount ?: 0.0
+
             if (currentAmount > 0 || compareAmount > 0) {
                 ComparisonItem(
                     categoryName = categoryName,
@@ -229,7 +227,7 @@ private fun BudgetComparisonView(
             } else null
         }
     }
-    
+
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -246,26 +244,26 @@ private fun BudgetComparisonView(
                     text = currentPartyName,
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = PartyColors.getColorByCode(currentPartyCode)
+                    color = Party.getColorByCode(currentPartyCode)
                 )
-                
+
                 Text(
                     text = comparePartyName,
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = PartyColors.getColorByCode(comparePartyCode)
+                    color = Party.getColorByCode(comparePartyCode)
                 )
             }
         }
-        
+
         item { Spacer(modifier = Modifier.height(8.dp)) }
-        
+
         // Comparison items
         items(comparisonData) { item ->
             ComparisonItemCard(
                 item = item,
-                currentPartyColor = PartyColors.getColorByCode(currentPartyCode),
-                comparePartyColor = PartyColors.getColorByCode(comparePartyCode)
+                currentPartyColor = Party.getColorByCode(currentPartyCode),
+                comparePartyColor = Party.getColorByCode(comparePartyCode)
             )
         }
     }
@@ -277,11 +275,8 @@ private fun ComparisonItemCard(
     currentPartyColor: androidx.compose.ui.graphics.Color,
     comparePartyColor: androidx.compose.ui.graphics.Color
 ) {
-    Card(
+    CommonCard(
         modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surface
-        )
     ) {
         Column(
             modifier = Modifier.padding(16.dp)
@@ -292,14 +287,14 @@ private fun ComparisonItemCard(
                 fontWeight = FontWeight.Medium,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
-            
+
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 // Current party amount
                 Column(
-                    horizontalAlignment = Alignment.Start
+                    horizontalAlignment = Alignment.Start,
                 ) {
                     Text(
                         text = "${item.currentAmount.toInt()} miljarder kr",
@@ -308,7 +303,7 @@ private fun ComparisonItemCard(
                         color = currentPartyColor
                     )
                 }
-                
+
                 // Compare party amount
                 Column(
                     horizontalAlignment = Alignment.End
@@ -321,7 +316,7 @@ private fun ComparisonItemCard(
                     )
                 }
             }
-            
+
             // Difference
             val difference = item.currentAmount - item.compareAmount
             if (difference != 0.0) {
@@ -339,6 +334,13 @@ private fun ComparisonItemCard(
         }
     }
 }
+
+private data class ComparisonBudgetItem(
+    val partyCode: String,
+    val budgetAmount: Double,
+    val sourceUrl: String,
+    val categoryName: String
+)
 
 private data class ComparisonItem(
     val categoryName: String,

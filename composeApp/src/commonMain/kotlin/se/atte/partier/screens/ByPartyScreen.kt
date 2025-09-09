@@ -10,6 +10,7 @@ import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.stringResource
 import partier.composeapp.generated.resources.Res
 import partier.composeapp.generated.resources.nav_back
+import se.atte.partier.components.CommonCard
 import se.atte.partier.data.SampleData
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -44,11 +45,8 @@ fun ByPartyScreen(
                 .padding(16.dp)
         ) {
             // Placeholder content
-            Card(
+            CommonCard(
                 modifier = Modifier.fillMaxWidth(),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant
-                )
             ) {
                 Column(
                     modifier = Modifier.padding(24.dp),

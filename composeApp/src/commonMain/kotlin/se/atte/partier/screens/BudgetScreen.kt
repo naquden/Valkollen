@@ -1,166 +1,118 @@
 package se.atte.partier.screens
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import org.jetbrains.compose.resources.stringResource
-import partier.composeapp.generated.resources.Res
-import partier.composeapp.generated.resources.budget_subtitle
-import partier.composeapp.generated.resources.budget_title
-import se.atte.partier.data.BudgetCategory
+import org.jetbrains.compose.ui.tooling.preview.Preview
+import se.atte.partier.components.CommonCardButton
+import se.atte.partier.components.standardPaddingLarge
+import se.atte.partier.components.standardPaddingMedium
+import se.atte.partier.components.standardPaddingSmall
 import se.atte.partier.data.SampleData
-import se.atte.partier.utils.openUrl
+import se.atte.partier.theme.ThemePreview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BudgetScreen(
-    onCategoryClick: (BudgetCategory) -> Unit,
-    onBackClick: () -> Unit,
-    onViewSelected: (ViewType) -> Unit
+    modifier: Modifier = Modifier,
+    onNavToExpense: () -> Unit,
+    onNavToIncome: () -> Unit,
+    onNavToParty: () -> Unit,
 ) {
     val year = remember { SampleData.year }
     val totalBudget = remember { SampleData.totalBudget }
-    
-    Column(
-        modifier = Modifier.fillMaxSize()
-    ) {
-        // Top App Bar
-        TopAppBar(
-            title = { 
-                Text(
-                    text = "Budget $year",
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.SemiBold
-                )
-            },
-            navigationIcon = {
-                TextButton(onClick = onBackClick) {
-                    Text("← Tillbaka")
-                }
-            }
+
+    Column(modifier = modifier) {
+        // Header
+        Text(
+            modifier = Modifier.padding(bottom = standardPaddingSmall),
+            text = "Sveriges Budget $year",
+            style = MaterialTheme.typography.headlineLarge,
+            fontWeight = FontWeight.Bold,
         )
-        
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(16.dp)
+
+        Row(
+            modifier = Modifier.padding(bottom = standardPaddingLarge),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
-                text = "Sveriges Budget $year",
-                style = MaterialTheme.typography.headlineLarge,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(bottom = 8.dp)
+                text = "${totalBudget.toInt()} miljarder kronor fördelas över olika områden",
+                style = MaterialTheme.typography.bodyMedium,
             )
-        
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.padding(bottom = 32.dp)
-            ) {
-                Text(
-                    text = "${totalBudget.toInt()} miljarder kronor fördelas över olika områden",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+        }
+
+        // View options
+        LazyColumn(
+            verticalArrangement = Arrangement.spacedBy(standardPaddingMedium),
+            contentPadding = PaddingValues(bottom = standardPaddingSmall)
+        ) {
+            item {
+                CommonCardButton(
+                    modifier = Modifier.fillMaxWidth(),
+                    title = "Utgifter",
+                    subTitle = arrayOf("Se statens utgifter fördelade på olika områden och partiernas budgetförslag"),
+                    showArrow = true,
+                    icon = { Text("💰", style = MaterialTheme.typography.headlineMedium) },
+                    onClickEvent = onNavToExpense,
                 )
             }
-
-            // Sub-navigation options
-            LazyColumn(
-                verticalArrangement = Arrangement.spacedBy(16.dp)
-            ) {
-                items(ViewType.values()) { viewType ->
-                    ViewOptionCard(
-                        viewType = viewType,
-                        onClick = { onViewSelected(viewType) }
-                    )
-                }
+            item {
+                CommonCardButton(
+                    modifier = Modifier.fillMaxWidth(),
+                    title = "Inkomster",
+                    subTitle = arrayOf("Se statens inkomster från skatter, avgifter och andra källor"),
+                    showArrow = true,
+                    icon = { Text("📈", style = MaterialTheme.typography.headlineMedium) },
+                    onClickEvent = onNavToIncome,
+                )
+            }
+            item {
+                CommonCardButton(
+                    modifier = Modifier.fillMaxWidth(),
+                    title = "Details per parti",
+                    subTitle = arrayOf("Se varje partis budgetförslag i detalj"),
+                    showArrow = true,
+                    icon = { Text("🏛️", style = MaterialTheme.typography.headlineMedium) },
+                    onClickEvent = onNavToParty,
+                )
             }
         }
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@Preview
 @Composable
-private fun BudgetCategoryCard(
-    category: BudgetCategory,
-    onClick: () -> Unit
-) {
-    Card(
-        onClick = onClick,
-        modifier = Modifier.fillMaxWidth(),
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
-    ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp)
-        ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = category.name,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    modifier = Modifier.weight(1f)
-                )
-                
-            }
-            
-            Spacer(modifier = Modifier.height(8.dp))
-            
-            Text(
-                text = category.description,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
+private fun PreviewStartScreen() {
+    ThemePreview {
+        BudgetScreen(
+            modifier = Modifier.fillMaxSize().padding(horizontal = standardPaddingMedium),
+            onNavToExpense = {},
+            onNavToIncome = {},
+            onNavToParty = {})
     }
 }
 
+@Preview
 @Composable
-private fun ViewOptionCard(
-    viewType: ViewType,
-    onClick: () -> Unit
-) {
-    Card(
-        onClick = onClick,
-        modifier = Modifier.fillMaxWidth(),
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
-    ) {
-        Column(
-            modifier = Modifier.padding(24.dp)
-        ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.padding(bottom = 8.dp)
-            ) {
-                Text(
-                    text = viewType.icon,
-                    style = MaterialTheme.typography.headlineMedium,
-                    modifier = Modifier.padding(end = 16.dp)
-                )
-                Text(
-                    text = viewType.title,
-                    style = MaterialTheme.typography.headlineSmall,
-                    fontWeight = FontWeight.Bold
-                )
-            }
-            
-            Text(
-                text = viewType.description,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
+private fun PreviewStartScreen_Dark() {
+    ThemePreview(useDarkMode = true) {
+        BudgetScreen(
+            modifier = Modifier.fillMaxSize().padding(horizontal = standardPaddingMedium),
+            onNavToExpense = {},
+            onNavToIncome = {},
+            onNavToParty = {})
     }
 }

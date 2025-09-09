@@ -84,10 +84,10 @@ private val darkScheme = darkColorScheme(
 
 @Composable
 fun AppTheme(
+    useDarkMode: Boolean = isSystemInDarkTheme(),
     content: @Composable() () -> Unit
 ) {
-    val useDarkTheme = isSystemInDarkTheme()
-    val targetColor = if (useDarkTheme) darkScheme else lightScheme
+    val targetColor = if (useDarkMode) darkScheme else lightScheme
 
     MaterialTheme(
         colorScheme = targetColor,
