@@ -112,6 +112,8 @@ private fun PartySelectionView(
                 onClick = { onPartySelected(party.code) }
             )
         }
+
+        item { Spacer(modifier = Modifier.height(standardPaddingSmall)) }
     }
 }
 
