@@ -36,6 +36,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 20.4,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 17.3,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -69,6 +74,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 21.9,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 17.0,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -102,6 +112,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 14.9,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 12.8,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -135,6 +150,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 179.8,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 153.5,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -168,6 +188,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 139.1,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 88.1,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -201,6 +226,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 126.5,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 111.5,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -234,6 +264,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 118.9,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 99.9,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -267,6 +302,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 66.2,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 41.3,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -300,6 +340,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 7.8,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 6.4,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -333,6 +378,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 112.2,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 93.1,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -366,6 +416,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 34.4,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 27.8,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -399,6 +454,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 109.2,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 100.9,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -432,6 +492,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 55.1,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 51.9,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -465,6 +530,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 12.0,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 8.5,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -498,6 +568,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 169.7,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 76.6,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -531,6 +606,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 118.9,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 62.6,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -564,6 +644,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 109.9,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 78.6,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -597,6 +682,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 31.9,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 22.2,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -630,6 +720,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 19.2,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 18.2,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -663,6 +758,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 2.3,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 2.2,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -696,6 +796,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 24.7,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 22.2,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -729,6 +834,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 8.8,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 9.3,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -762,6 +872,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 10.9,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 4.6,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -795,6 +910,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 10.1,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 5.1,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -828,6 +948,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 4.5,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 5.3,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -861,6 +986,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 28.8,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 12.2,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -894,6 +1024,11 @@ object BudgetDataJson {
           "partyCode": "V",
           "budgetAmount": 47.8,
           "sourceUrl": "https://data.riksdagen.se/fil/06D97284-41A0-430E-A8FA-52B2DC39D86C"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 47.8,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     }
@@ -924,6 +1059,16 @@ object BudgetDataJson {
           "partyCode": "C",
           "budgetAmount": 1407.4,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
+        },
+        {
+          "partyCode": "V",
+          "budgetAmount": 1487.7,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/for-ett-starkare-sverige-klimat-valfard-och_hc021924/html/"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 2351.8,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -952,6 +1097,16 @@ object BudgetDataJson {
           "partyCode": "C",
           "budgetAmount": 48.3,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
+        },
+        {
+          "partyCode": "V",
+          "budgetAmount": 48.8,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/for-ett-starkare-sverige-klimat-valfard-och_hc021924/html/"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 43.8,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -980,6 +1135,16 @@ object BudgetDataJson {
           "partyCode": "C",
           "budgetAmount": 5.0,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
+        },
+        {
+          "partyCode": "V",
+          "budgetAmount": 5.0,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/for-ett-starkare-sverige-klimat-valfard-och_hc021924/html/"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 5.0,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -1008,6 +1173,16 @@ object BudgetDataJson {
           "partyCode": "C",
           "budgetAmount": 0.6,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
+        },
+        {
+          "partyCode": "V",
+          "budgetAmount": 0.6,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/for-ett-starkare-sverige-klimat-valfard-och_hc021924/html/"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 0.5,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -1036,6 +1211,16 @@ object BudgetDataJson {
           "partyCode": "C",
           "budgetAmount": 23.9,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
+        },
+        {
+          "partyCode": "V",
+          "budgetAmount": 23.9,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/for-ett-starkare-sverige-klimat-valfard-och_hc021924/html/"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 18.0,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -1064,6 +1249,16 @@ object BudgetDataJson {
           "partyCode": "C",
           "budgetAmount": 48.8,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
+        },
+        {
+          "partyCode": "V",
+          "budgetAmount": 48.8,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/for-ett-starkare-sverige-klimat-valfard-och_hc021924/html/"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 27.8,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -1092,6 +1287,16 @@ object BudgetDataJson {
           "partyCode": "C",
           "budgetAmount": -154.4,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
+        },
+        {
+          "partyCode": "V",
+          "budgetAmount": -154.4,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/for-ett-starkare-sverige-klimat-valfard-och_hc021924/html/"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": -126.6,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     },
@@ -1120,6 +1325,16 @@ object BudgetDataJson {
           "partyCode": "C",
           "budgetAmount": 0.0,
           "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
+        },
+        {
+          "partyCode": "V",
+          "budgetAmount": 0.0,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/for-ett-starkare-sverige-klimat-valfard-och_hc021924/html/"
+        },
+        {
+          "partyCode": "L",
+          "budgetAmount": 0.0,
+          "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
         }
       ]
     }
