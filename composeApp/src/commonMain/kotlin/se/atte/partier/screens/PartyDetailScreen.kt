@@ -1,6 +1,8 @@
 package se.atte.partier.screens
 
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -10,18 +12,16 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.Button
-import androidx.compose.material3.Card
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Compare
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Compare
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -29,27 +29,30 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import org.jetbrains.compose.resources.stringResource
-import partier.composeapp.generated.resources.Res
-import partier.composeapp.generated.resources.billion_kr
-import partier.composeapp.generated.resources.nav_back
+import org.jetbrains.compose.ui.tooling.preview.Preview
 import se.atte.partier.components.CommonCard
-import se.atte.partier.constants.Party
-import se.atte.partier.data.SampleData
+import se.atte.partier.components.CommonCardButton
 import se.atte.partier.components.PartyComparisonDialog
 import se.atte.partier.components.standardPaddingMedium
+import se.atte.partier.components.standardPaddingSmall
+import se.atte.partier.constants.Party
+import se.atte.partier.data.SampleData
+import se.atte.partier.theme.ThemePreview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PartyDetailScreen(
+    modifier: Modifier = Modifier,
     partyCode: String,
     onBackClick: () -> Unit
 ) {
     var showComparisonDialog by remember { mutableStateOf(false) }
     val partyName = Party.fromCode(partyCode)?.displayName ?: "Okänt parti"
-
     val partyColor = Party.getColorByCode(partyCode)
 
     // Get party's budget data
@@ -90,38 +93,40 @@ fun PartyDetailScreen(
         }
     }
 
-    Column(
-        modifier = Modifier.fillMaxSize()
-    ) {
-        // Top App Bar
-        TopAppBar(
-            title = {
-                Text(
-                    text = partyName,
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.SemiBold
-                )
-            },
-            navigationIcon = {
-                TextButton(onClick = onBackClick) {
-                    Text(stringResource(Res.string.nav_back))
+    Scaffold(
+        modifier = modifier,
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        text = partyName,
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                },
+                navigationIcon = {
+                    TextButton(onClick = onBackClick) {
+                        Text("← Tillbaka")
+                    }
                 }
-            }
-        )
-
+            )
+        }
+    ) { contentPadding ->
         LazyColumn(
             modifier = Modifier
-                .fillMaxSize()
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+                .padding(contentPadding)
+                .padding(horizontal = standardPaddingMedium),
+            verticalArrangement = Arrangement.spacedBy(standardPaddingMedium)
         ) {
+            item { Spacer(modifier = Modifier.height(standardPaddingMedium)) }
             // Party Header
             item {
                 CommonCard(
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     Column(
-                        modifier = Modifier.padding(16.dp)
+                        modifier = Modifier.padding(standardPaddingMedium),
+                        verticalArrangement = Arrangement.spacedBy(standardPaddingMedium)
                     ) {
                         Text(
                             text = partyName,
@@ -130,36 +135,26 @@ fun PartyDetailScreen(
                             color = partyColor
                         )
 
-                        Spacer(modifier = Modifier.height(8.dp))
-
                         Text(
                             text = "Budgetförslag ${SampleData.year}",
                             style = MaterialTheme.typography.titleMedium,
-                            color = MaterialTheme.colorScheme.onSurface
                         )
 
-                        Spacer(modifier = Modifier.height(4.dp))
-
-                        Text(
-                            text = "Total budget: ${SampleData.totalBudget} ${stringResource(Res.string.billion_kr)}",
-                            style = MaterialTheme.typography.bodyLarge,
-                            fontWeight = FontWeight.Medium,
-                            color = MaterialTheme.colorScheme.onSurface
+                        CommonCardButton(
+                            modifier = Modifier.fillMaxWidth(),
+                            title = "Jämför med annat parti",
+                            icon = {
+                                Icon(
+                                    imageVector = Icons.Default.Compare,
+                                    contentDescription = "Jämför"
+                                )
+                            },
+                            colors = CardDefaults.cardColors(
+                                containerColor = MaterialTheme.colorScheme.primary,
+                                contentColor = MaterialTheme.colorScheme.onPrimary
+                            ),
+                            onClickEvent = { showComparisonDialog = true }
                         )
-
-                        Spacer(modifier = Modifier.height(16.dp))
-
-                        Button(
-                            onClick = { showComparisonDialog = true },
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.Compare,
-                                contentDescription = "Jämför",
-                                modifier = Modifier.padding(end = 8.dp)
-                            )
-                            Text("Jämför med annat parti")
-                        }
                     }
                 }
             }
@@ -167,17 +162,15 @@ fun PartyDetailScreen(
             // Budget Summary
             if (budgetData.isNotEmpty()) {
                 item {
-                    CommonCard(
-                        modifier = Modifier.fillMaxWidth(),
-                    ) {
+                    CommonCard {
                         Column(
-                            modifier = Modifier.padding(16.dp)
+                            modifier = Modifier.fillMaxWidth().padding(standardPaddingMedium)
                         ) {
                             Text(
-                                text = "Utgifter per kategori",
+                                modifier = Modifier.padding(bottom = standardPaddingSmall),
+                                text = "Utgifter & inkomster",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
-                                modifier = Modifier.padding(bottom = 8.dp)
                             )
 
                             Text(
@@ -187,85 +180,57 @@ fun PartyDetailScreen(
                             )
 
                             Text(
-                                text = "Antal kategorier: ${budgetData.size}",
-                                style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                    }
-                }
-            }
-
-            // Income Summary
-            if (incomeData.isNotEmpty()) {
-                item {
-                    CommonCard(
-                        modifier = Modifier.fillMaxWidth(),
-                    ) {
-                        Column(
-                            modifier = Modifier.padding(16.dp)
-                        ) {
-                            Text(
-                                text = "Inkomster per kategori",
-                                style = MaterialTheme.typography.titleMedium,
-                                fontWeight = FontWeight.Bold,
-                                modifier = Modifier.padding(bottom = 8.dp)
-                            )
-
-                            Text(
                                 text = "Total inkomster: ${incomeData.sumOf { it.budgetAmount }.toInt()} miljarder kr",
                                 style = MaterialTheme.typography.bodyLarge,
                                 fontWeight = FontWeight.Medium
                             )
-
-                            Text(
-                                text = "Antal kategorier: ${incomeData.size}",
-                                style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
                         }
                     }
                 }
             }
 
-            // Budget Categories List
+            // Budget Categories Bar Chart
             if (budgetData.isNotEmpty()) {
                 item {
                     Text(
-                        text = "Detaljerade utgifter",
+                        modifier = Modifier.padding(vertical = standardPaddingSmall),
+                        text = "Utgiftsfördelning per kategori",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        modifier = Modifier.padding(vertical = 8.dp)
                     )
                 }
 
-                items(budgetData) { item ->
-                    SimpleCategoryCard(
-                        label = item.categoryName,
-                        value = item.budgetAmount
+                item {
+                    BudgetAllocationChart(
+                        modifier = Modifier.fillMaxWidth(),
+                        budgetData = budgetData,
+                        partyColor = partyColor,
                     )
                 }
             }
 
-            // Income Categories List
+            // Income Categories Bar Chart
             if (incomeData.isNotEmpty()) {
                 item {
                     Text(
-                        text = "Detaljerade inkomster",
+                        text = "Inkomstfördelning per kategori",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        modifier = Modifier.padding(vertical = 8.dp)
+                        modifier = Modifier.padding(vertical = standardPaddingSmall)
                     )
                 }
 
-                items(incomeData) { item ->
-                    SimpleCategoryCard(
-                        label = item.categoryName,
-                        value = item.budgetAmount
+                item {
+                    IncomeAllocationChart(
+                        modifier = Modifier.fillMaxWidth(),
+                        incomeData = incomeData,
+                        partyColor = partyColor,
                     )
                 }
 
-                item { Spacer(modifier = Modifier.height(standardPaddingMedium)) }
+                item {
+                    Spacer(modifier = Modifier.height(standardPaddingMedium))
+                }
             }
         }
     }
@@ -280,17 +245,240 @@ fun PartyDetailScreen(
 }
 
 @Composable
+private fun IncomeAllocationChart(
+    modifier: Modifier = Modifier,
+    incomeData: List<PartyDetailItem>,
+    partyColor: Color,
+) {
+    val totalIncome = incomeData.sumOf { it.budgetAmount }
+    val sortedData = incomeData.sortedByDescending { it.budgetAmount }
+
+    CommonCard(
+        modifier = modifier
+    ) {
+        Column(
+            modifier = Modifier.padding(standardPaddingMedium),
+            verticalArrangement = Arrangement.spacedBy(standardPaddingMedium)
+        ) {
+            Text(
+                text = "Total inkomst: ${totalIncome.toInt()} miljarder kr",
+                style = MaterialTheme.typography.bodyMedium,
+            )
+
+            Column(
+                verticalArrangement = Arrangement.spacedBy(standardPaddingSmall)
+            ) {
+                sortedData.forEach { item ->
+                    IncomeAllocationBar(
+                        categoryName = item.categoryName,
+                        amount = item.budgetAmount,
+                        totalIncome = totalIncome,
+                        partyColor = partyColor
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun IncomeAllocationBar(
+    categoryName: String,
+    amount: Double,
+    totalIncome: Double,
+    partyColor: Color
+) {
+    val percentage = if (totalIncome > 0) amount / totalIncome else 0.0
+
+    Column(
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        // Category name and amount
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = categoryName,
+                style = MaterialTheme.typography.bodyMedium,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.weight(1f)
+            )
+
+            Text(
+                text = "${amount.toInt()} miljarder kr",
+                style = MaterialTheme.typography.bodySmall,
+                fontWeight = FontWeight.Bold
+            )
+        }
+
+        Spacer(modifier = Modifier.height(4.dp))
+
+        // Bar chart
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(16.dp)
+        ) {
+            Canvas(
+                modifier = Modifier.fillMaxSize()
+            ) {
+                val canvasWidth = size.width
+                val canvasHeight = size.height
+                val barHeight = canvasHeight * 0.8f
+                val barY = (canvasHeight - barHeight) / 2f
+
+                // Background bar
+                drawRect(
+                    color = Color.Gray.copy(alpha = 0.2f),
+                    topLeft = Offset(0f, barY),
+                    size = Size(canvasWidth, barHeight)
+                )
+
+                // Main bar
+                val barWidth = canvasWidth * percentage.toFloat()
+                drawRect(
+                    color = partyColor,
+                    topLeft = Offset(0f, barY),
+                    size = Size(barWidth, barHeight)
+                )
+            }
+        }
+
+        // Percentage text
+        Text(
+            text = "${(percentage * 100).toInt()}%",
+            style = MaterialTheme.typography.bodySmall,
+            modifier = Modifier.padding(top = 2.dp)
+        )
+    }
+}
+
+@Composable
+private fun BudgetAllocationChart(
+    budgetData: List<PartyDetailItem>,
+    partyColor: Color,
+    modifier: Modifier = Modifier
+) {
+    val totalBudget = budgetData.sumOf { it.budgetAmount }
+    val sortedData = budgetData.sortedByDescending { it.budgetAmount }
+
+    CommonCard(
+        modifier = modifier
+    ) {
+        Column(
+            modifier = Modifier.padding(standardPaddingMedium)
+        ) {
+            Text(
+                text = "Total budget: ${totalBudget.toInt()} miljarder kr",
+                style = MaterialTheme.typography.bodyMedium,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.padding(bottom = standardPaddingMedium)
+            )
+
+            Column(
+                verticalArrangement = Arrangement.spacedBy(standardPaddingSmall)
+            ) {
+                sortedData.forEach { item ->
+                    BudgetAllocationBar(
+                        categoryName = item.categoryName,
+                        amount = item.budgetAmount,
+                        totalBudget = totalBudget,
+                        partyColor = partyColor
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun BudgetAllocationBar(
+    categoryName: String,
+    amount: Double,
+    totalBudget: Double,
+    partyColor: Color
+) {
+    val percentage = if (totalBudget > 0) amount / totalBudget else 0.0
+
+    Column(
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        // Category name and amount
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = categoryName,
+                style = MaterialTheme.typography.bodyMedium,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.weight(1f)
+            )
+
+            Text(
+                text = "${amount.toInt()} miljarder kr",
+                style = MaterialTheme.typography.bodySmall,
+                fontWeight = FontWeight.Bold
+            )
+        }
+
+        Spacer(modifier = Modifier.height(4.dp))
+
+        // Bar chart
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(16.dp)
+        ) {
+            Canvas(
+                modifier = Modifier.fillMaxSize()
+            ) {
+                val canvasWidth = size.width
+                val canvasHeight = size.height
+                val barHeight = canvasHeight * 0.8f
+                val barY = (canvasHeight - barHeight) / 2f
+
+                // Background bar
+                drawRect(
+                    color = Color.Gray.copy(alpha = 0.2f),
+                    topLeft = Offset(0f, barY),
+                    size = Size(canvasWidth, barHeight)
+                )
+
+                // Main bar
+                val barWidth = canvasWidth * percentage.toFloat()
+                drawRect(
+                    color = partyColor,
+                    topLeft = Offset(0f, barY),
+                    size = Size(barWidth, barHeight)
+                )
+            }
+        }
+
+        // Percentage text
+        Text(
+            text = "${(percentage * 100).toInt()}%",
+            style = MaterialTheme.typography.bodySmall,
+            modifier = Modifier.padding(top = 2.dp)
+        )
+    }
+}
+
+@Composable
 private fun SimpleCategoryCard(
     label: String,
     value: Double
 ) {
     CommonCard(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth()
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp),
+                .padding(standardPaddingMedium),
             verticalAlignment = Alignment.CenterVertically
         ) {
             // Simple bullet point
@@ -300,7 +488,7 @@ private fun SimpleCategoryCard(
                 color = MaterialTheme.colorScheme.primary
             )
 
-            Spacer(modifier = Modifier.width(12.dp))
+            Spacer(modifier = Modifier.width(standardPaddingSmall))
 
             // Category info
             Column(
@@ -315,10 +503,31 @@ private fun SimpleCategoryCard(
                 Text(
                     text = "${value.toInt()} miljarder kr",
                     style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
         }
+    }
+}
+
+@Preview
+@Composable
+private fun PreviewPartyDetailScreen() {
+    ThemePreview {
+        PartyDetailScreen(
+            partyCode = "SD",
+            onBackClick = {}
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun PreviewPartyDetailScreen_Dark() {
+    ThemePreview(useDarkMode = true) {
+        PartyDetailScreen(
+            partyCode = "M",
+            onBackClick = {}
+        )
     }
 }
 

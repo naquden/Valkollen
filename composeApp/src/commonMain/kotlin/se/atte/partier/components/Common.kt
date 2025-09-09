@@ -190,6 +190,7 @@ fun CommonCardButton(
     icon: (@Composable () -> Unit)? = null,
     showArrow: Boolean = false,
     cardPadding: Dp = standardPaddingMedium,
+    colors: CardColors = CardDefaults.cardColors(),
     enabled: Boolean = true,
     onClickEvent: () -> Unit
 ) {
@@ -201,6 +202,7 @@ fun CommonCardButton(
         showArrow = showArrow,
         cardPadding = cardPadding,
         enabled = enabled,
+        colors = colors,
         onClickEvent = onClickEvent
     )
 }
@@ -216,7 +218,7 @@ fun CommonCardButton(
     enabled: Boolean = true,
     shape: Shape = MaterialTheme.shapes.medium,
     border: BorderStroke? = null,
-    cardColor: CardColors = CardDefaults.cardColors(),
+    colors: CardColors = CardDefaults.cardColors(),
     onClickEvent: () -> Unit
 ) {
     Card(
@@ -226,7 +228,7 @@ fun CommonCardButton(
         onClick = onClickEvent,
         enabled = enabled,
         border = border,
-        colors = cardColor
+        colors = colors
     ) {
         Row(
             modifier = Modifier.padding(cardPadding),

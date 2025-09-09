@@ -61,7 +61,7 @@ sealed class Screen {
 @Composable
 @Preview
 fun App() {
-    AppTheme {
+    AppTheme(useDarkMode = false) {
         val navController = rememberNavController()
         val onBackClick: () -> Unit = { navController.popBackStack() }
 
@@ -88,7 +88,8 @@ fun App() {
                         .padding(contentPadding) // Padding from Scaffold (system bars, etc.)
                 ) {
                     NavHost(
-                        navController = navController, startDestination = Screen.Budget,
+                        navController = navController,
+                        startDestination = Screen.Budget,
                         enterTransition = {
                             slideInHorizontally(initialOffsetX = { it })
                         },

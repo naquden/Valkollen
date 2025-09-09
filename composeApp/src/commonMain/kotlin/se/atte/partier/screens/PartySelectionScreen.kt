@@ -27,12 +27,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.stringResource
+import org.jetbrains.compose.ui.tooling.preview.Preview
 import partier.composeapp.generated.resources.Res
 import partier.composeapp.generated.resources.nav_back
 import se.atte.partier.components.CommonCard
 import se.atte.partier.components.standardPaddingMedium
 import se.atte.partier.components.standardPaddingSmall
 import se.atte.partier.constants.Party
+import se.atte.partier.theme.ThemePreview
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -62,30 +64,23 @@ fun PartySelectionScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(standardPaddingMedium)
+                .padding(horizontal = standardPaddingMedium)
         ) {
-            // Header
-            CommonCard(
-                modifier = Modifier.fillMaxWidth(),
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(standardPaddingMedium)
             ) {
-                Column(
-                    modifier = Modifier.padding(standardPaddingMedium)
-                ) {
-                    Text(
-                        text = "Välj parti",
-                        style = MaterialTheme.typography.headlineSmall,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onPrimaryContainer
-                    )
+                Text(
+                    text = "Välj parti",
+                    style = MaterialTheme.typography.headlineSmall,
+                    fontWeight = FontWeight.Bold,
+                )
 
-                    Spacer(modifier = Modifier.height(standardPaddingSmall))
+                Spacer(modifier = Modifier.height(standardPaddingSmall))
 
-                    Text(
-                        text = "Se varje partis detaljerade budgetförslag med utgifter och inkomster",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onPrimaryContainer
-                    )
-                }
+                Text(
+                    text = "Se varje partis detaljerade budgetförslag med utgifter och inkomster",
+                    style = MaterialTheme.typography.bodyMedium,
+                )
             }
 
             Spacer(modifier = Modifier.height(24.dp))
@@ -100,6 +95,9 @@ fun PartySelectionScreen(
                         partyCode = party.code,
                         onClick = { onPartySelected(party.code) }
                     )
+                }
+                item {
+                    Spacer(modifier = Modifier.height(standardPaddingMedium))
                 }
             }
         }
@@ -120,7 +118,7 @@ private fun PartyCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp),
+                .padding(standardPaddingMedium),
             verticalAlignment = Alignment.CenterVertically
         ) {
             // Party icon/color indicator
@@ -170,5 +168,27 @@ private fun PartyCard(
                 color = MaterialTheme.colorScheme.primary
             )
         }
+    }
+}
+
+@Preview
+@Composable
+fun PreviewPartySelectionScreen() {
+    ThemePreview {
+        PartySelectionScreen(
+            onBackClick = {},
+            onPartySelected = {}
+        )
+    }
+}
+
+@Preview
+@Composable
+fun PreviewPartySelectionScreen_Dark() {
+    ThemePreview(useDarkMode = true) {
+        PartySelectionScreen(
+            onBackClick = {},
+            onPartySelected = {}
+        )
     }
 }

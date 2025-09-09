@@ -1,5 +1,6 @@
 package se.atte.partier.components
 
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -9,12 +10,18 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import org.jetbrains.compose.ui.tooling.preview.Preview
 import se.atte.partier.constants.Party
 import se.atte.partier.data.SampleData
+import se.atte.partier.theme.ThemePreview
 
 @Composable
 fun PartyComparisonDialog(
@@ -96,7 +103,7 @@ private fun PartySelectionView(
         modifier = Modifier
             .fillMaxSize()
             .padding(standardPaddingMedium),
-        verticalArrangement = Arrangement.spacedBy(standardPaddingMedium)
+        verticalArrangement = Arrangement.spacedBy(standardPaddingSmall)
     ) {
         items(Party.entries.filter { it.code != currentPartyCode }) { party ->
             PartySelectionCard(
@@ -117,7 +124,7 @@ private fun PartySelectionCard(
     CommonCard(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { onClick() },
+            .clickable { onClick() }
     ) {
         Row(
             modifier = Modifier
@@ -138,13 +145,12 @@ private fun PartySelectionCard(
                     Text(
                         text = partyCode,
                         style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onPrimary
+                        fontWeight = FontWeight.Bold
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.width(16.dp))
+            Spacer(modifier = Modifier.width(standardPaddingMedium))
 
             // Party info
             Column(
@@ -158,16 +164,14 @@ private fun PartySelectionCard(
 
                 Text(
                     text = "Klicka för att jämföra budget",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                    style = MaterialTheme.typography.bodyMedium
                 )
             }
 
             // Arrow indicator
             Text(
                 text = "→",
-                style = MaterialTheme.typography.titleLarge,
-                color = MaterialTheme.colorScheme.primary
+                style = MaterialTheme.typography.titleLarge
             )
         }
     }
@@ -231,8 +235,8 @@ private fun BudgetComparisonView(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+            .padding(standardPaddingMedium),
+        verticalArrangement = Arrangement.spacedBy(standardPaddingSmall)
     ) {
         // Header
         item {
@@ -243,20 +247,18 @@ private fun BudgetComparisonView(
                 Text(
                     text = currentPartyName,
                     style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = Party.getColorByCode(currentPartyCode)
+                    fontWeight = FontWeight.Bold
                 )
 
                 Text(
                     text = comparePartyName,
                     style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = Party.getColorByCode(comparePartyCode)
+                    fontWeight = FontWeight.Bold
                 )
             }
         }
 
-        item { Spacer(modifier = Modifier.height(8.dp)) }
+        item { Spacer(modifier = Modifier.height(standardPaddingSmall)) }
 
         // Comparison items
         items(comparisonData) { item ->
@@ -276,16 +278,28 @@ private fun ComparisonItemCard(
     comparePartyColor: androidx.compose.ui.graphics.Color
 ) {
     CommonCard(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth()
     ) {
         Column(
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(standardPaddingMedium)
         ) {
             Text(
                 text = item.categoryName,
                 style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.Medium,
-                modifier = Modifier.padding(bottom = 8.dp)
+                modifier = Modifier.padding(bottom = standardPaddingSmall)
+            )
+
+            // Visual comparison bar
+            ComparisonBar(
+                currentAmount = item.currentAmount,
+                compareAmount = item.compareAmount,
+                currentPartyColor = currentPartyColor,
+                comparePartyColor = comparePartyColor,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(24.dp)
+                    .padding(vertical = standardPaddingSmall)
             )
 
             Row(
@@ -294,13 +308,12 @@ private fun ComparisonItemCard(
             ) {
                 // Current party amount
                 Column(
-                    horizontalAlignment = Alignment.Start,
+                    horizontalAlignment = Alignment.Start
                 ) {
                     Text(
                         text = "${item.currentAmount.toInt()} miljarder kr",
                         style = MaterialTheme.typography.bodyLarge,
-                        fontWeight = FontWeight.Bold,
-                        color = currentPartyColor
+                        fontWeight = FontWeight.Bold
                     )
                 }
 
@@ -311,8 +324,7 @@ private fun ComparisonItemCard(
                     Text(
                         text = "${item.compareAmount.toInt()} miljarder kr",
                         style = MaterialTheme.typography.bodyLarge,
-                        fontWeight = FontWeight.Bold,
-                        color = comparePartyColor
+                        fontWeight = FontWeight.Bold
                     )
                 }
             }
@@ -328,9 +340,65 @@ private fun ComparisonItemCard(
                         "${difference.toInt()} miljarder kr skillnad"
                     },
                     style = MaterialTheme.typography.bodySmall,
-                    color = if (difference > 0) currentPartyColor else comparePartyColor
+                    modifier = Modifier.fillMaxWidth(),
+                    textAlign = TextAlign.Center
                 )
             }
+        }
+    }
+}
+
+@Composable
+private fun ComparisonBar(
+    currentAmount: Double,
+    compareAmount: Double,
+    currentPartyColor: Color,
+    comparePartyColor: Color,
+    modifier: Modifier = Modifier
+) {
+    val totalAmount = currentAmount + compareAmount
+    val currentPercentage = if (totalAmount > 0) currentAmount / totalAmount else 0.5
+    val comparePercentage = if (totalAmount > 0) compareAmount / totalAmount else 0.5
+
+    Canvas(modifier = modifier) {
+        val canvasWidth = size.width
+        val canvasHeight = size.height
+        val barHeight = canvasHeight * 0.8f
+        val barY = (canvasHeight - barHeight) / 2f
+
+        // Background bar
+        drawRect(
+            color = Color.Gray.copy(alpha = 0.2f),
+            topLeft = Offset(0f, barY),
+            size = Size(canvasWidth, barHeight)
+        )
+
+        // Current party bar (left side)
+        val currentBarWidth = canvasWidth * currentPercentage.toFloat()
+        drawRect(
+            color = currentPartyColor,
+            topLeft = Offset(0f, barY),
+            size = Size(currentBarWidth, barHeight)
+        )
+
+        // Compare party bar (right side)
+        val compareBarWidth = canvasWidth * comparePercentage.toFloat()
+        val compareBarX = canvasWidth - compareBarWidth
+        drawRect(
+            color = comparePartyColor,
+            topLeft = Offset(compareBarX, barY),
+            size = Size(compareBarWidth, barHeight)
+        )
+
+        // Center divider line (when amounts are equal)
+        if (currentAmount == compareAmount && currentAmount > 0) {
+            val centerX = canvasWidth / 2f
+            drawLine(
+                color = Color.White,
+                start = Offset(centerX, barY),
+                end = Offset(centerX, barY + barHeight),
+                strokeWidth = 2.dp.toPx()
+            )
         }
     }
 }
@@ -341,6 +409,50 @@ private data class ComparisonBudgetItem(
     val sourceUrl: String,
     val categoryName: String
 )
+
+@Preview
+@Composable
+private fun PreviewPartyComparisonDialog() {
+    ThemePreview {
+        PartyComparisonDialog(
+            currentPartyCode = "SD",
+            onDismiss = {}
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun PreviewPartyComparisonDialog_Dark() {
+    ThemePreview(useDarkMode = true) {
+        PartyComparisonDialog(
+            currentPartyCode = "M",
+            onDismiss = {}
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun PreviewComparisonView() {
+    ThemePreview {
+        BudgetComparisonView(
+            currentPartyCode = "SD",
+            comparePartyCode = "M"
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun PreviewComparisonView_Dark() {
+    ThemePreview(useDarkMode = true) {
+        BudgetComparisonView(
+            currentPartyCode = "M",
+            comparePartyCode = "MP"
+        )
+    }
+}
 
 private data class ComparisonItem(
     val categoryName: String,
