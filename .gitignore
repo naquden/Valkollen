@@ -34,3 +34,6 @@ google-services.json
 
 # Android Profiling
 *.hprof
+/firebase.json
+/.firebaserc
+/.firebase/hosting.Y29tcG9zZUFwcC9idWlsZC9kaXN0L3dhc21Kcy9wcm9kdWN0aW9uRXhlY3V0YWJsZQ.cache
