@@ -29,6 +29,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 20.3,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 19.6,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -55,6 +61,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 21.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 21.7,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -81,6 +93,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 14.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 14.6,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -107,6 +125,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 174.1,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 178.4,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -133,6 +157,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 123.1,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 122.3,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -159,6 +189,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 132.5,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 120.6,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -185,6 +221,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 104.5,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 103.2,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -211,6 +253,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 62.9,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 62.9,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -237,6 +285,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 9.3,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 6.8,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -263,6 +317,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 95.5,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 78.1,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -289,6 +349,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 36.1,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 33.7,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -315,6 +381,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 109.3,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 108.9,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -341,6 +413,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 57.0,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 46.2,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -367,6 +445,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 12.3,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 11.8,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -393,6 +477,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 170.6,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 170.0,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -419,6 +509,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 88.4,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 87.2,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -445,6 +541,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 133.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 95.4,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -471,6 +573,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 40.6,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 21.4,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -497,6 +605,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 19.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 17.6,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -523,6 +637,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 2.4,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 2.3,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -549,6 +669,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 25.4,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 22.0,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -575,6 +701,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 8.7,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 8.3,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -601,6 +733,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 20.0,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 7.0,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -627,6 +765,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 13.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 3.3,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -653,6 +797,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 4.4,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 4.3,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -679,6 +829,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 28.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 28.8,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -705,6 +861,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 47.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 47.8,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     }
@@ -743,6 +905,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 2735.5,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 1407.4,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -769,6 +937,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 47.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 48.3,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -795,6 +969,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 5.0,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 5.0,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -821,6 +1001,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 0.6,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 0.6,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -847,6 +1033,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 24.0,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 23.9,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -873,6 +1065,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 48.8,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 48.8,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -899,6 +1097,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": -150.0,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": -154.4,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     },
@@ -925,6 +1129,12 @@ object BudgetDataJson {
           "partyCode": "MP",
           "budgetAmount": 0.0,
           "sourceUrl": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+        },
+        {
+          "partyName": "Centerpartiet (C)",
+          "partyCode": "C",
+          "budgetAmount": 0.0,
+          "sourceUrl": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf"
         }
       ]
     }
