@@ -114,6 +114,7 @@ fun PartyDetailScreen(
     ) { contentPadding ->
         LazyColumn(
             modifier = Modifier
+                .fillMaxWidth()
                 .padding(contentPadding)
                 .padding(horizontal = standardPaddingMedium),
             verticalArrangement = Arrangement.spacedBy(standardPaddingMedium)

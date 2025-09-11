@@ -5,3 +5,14 @@ html, body {
     padding: 0;
     overflow: hidden;
 }
+
+/* Enable smooth scrolling for touchpad gestures */
+* {
+    scroll-behavior: smooth;
+}
+
+/* Ensure proper touchpad scrolling support */
+.compose-root {
+    touch-action: pan-y;
+    overscroll-behavior: contain;
+}

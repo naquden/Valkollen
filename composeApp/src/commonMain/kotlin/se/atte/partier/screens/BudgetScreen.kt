@@ -56,6 +56,7 @@ fun BudgetScreen(
 
         // View options
         LazyColumn(
+            modifier = Modifier.fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(standardPaddingMedium),
             contentPadding = PaddingValues(bottom = standardPaddingSmall)
         ) {

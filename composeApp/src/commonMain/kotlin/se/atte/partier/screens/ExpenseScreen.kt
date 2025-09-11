@@ -2,6 +2,7 @@ package se.atte.partier.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -18,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import se.atte.partier.components.CommonCardButton
 import se.atte.partier.components.standardPaddingMedium
@@ -66,7 +68,9 @@ fun ExpenseScreen(
             )
 
             LazyColumn(
-                verticalArrangement = Arrangement.spacedBy(standardPaddingSmall)
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.spacedBy(standardPaddingSmall),
+                contentPadding = PaddingValues(bottom = 100.dp) // Extra bottom padding for better scrolling UX
             ) {
                 items(categories) { category ->
                     CommonCardButton(

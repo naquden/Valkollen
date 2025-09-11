@@ -87,6 +87,7 @@ fun PartySelectionScreen(
 
             // Party List
             LazyColumn(
+                modifier = Modifier.fillMaxWidth(),
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 items(Party.entries.toTypedArray()) { party ->
