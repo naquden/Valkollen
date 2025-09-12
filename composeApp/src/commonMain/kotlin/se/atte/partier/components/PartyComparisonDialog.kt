@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -171,9 +172,9 @@ private fun PartySelectionCard(
             }
 
             // Arrow indicator
-            Text(
-                text = "→",
-                style = MaterialTheme.typography.titleLarge
+            Icon(
+                painter = HeroIcons.ArrowRight.painter(),
+                contentDescription = null
             )
         }
     }

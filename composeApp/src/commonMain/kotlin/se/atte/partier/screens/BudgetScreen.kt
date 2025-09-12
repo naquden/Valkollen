@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,6 +19,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import se.atte.partier.components.CommonCardButton
+import se.atte.partier.components.HeroIcons
+import se.atte.partier.components.painter
 import se.atte.partier.components.standardPaddingLarge
 import se.atte.partier.components.standardPaddingMedium
 import se.atte.partier.components.standardPaddingSmall
@@ -66,7 +69,7 @@ fun BudgetScreen(
                     title = "Utgifter",
                     subTitle = arrayOf("Se statens utgifter fördelade på olika områden och partiernas budgetförslag"),
                     showArrow = true,
-                    icon = { Text("💰", style = MaterialTheme.typography.headlineMedium) },
+                    icon = { Icon(painter = HeroIcons.Expense.painter(), contentDescription = null) },
                     onClickEvent = onNavToExpense,
                 )
             }
@@ -76,7 +79,7 @@ fun BudgetScreen(
                     title = "Inkomster",
                     subTitle = arrayOf("Se statens inkomster från skatter, avgifter och andra källor"),
                     showArrow = true,
-                    icon = { Text("📈", style = MaterialTheme.typography.headlineMedium) },
+                    icon = { Icon(painter = HeroIcons.Income.painter(), contentDescription = null) },
                     onClickEvent = onNavToIncome,
                 )
             }
@@ -86,7 +89,7 @@ fun BudgetScreen(
                     title = "Details per parti",
                     subTitle = arrayOf("Se varje partis budgetförslag i detalj"),
                     showArrow = true,
-                    icon = { Text("🏛️", style = MaterialTheme.typography.headlineMedium) },
+                    icon = { Icon(painter = HeroIcons.PartyDetails.painter(), contentDescription = null) },
                     onClickEvent = onNavToParty,
                 )
             }

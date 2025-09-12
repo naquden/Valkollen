@@ -16,8 +16,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeContent
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.rounded.ArrowRight
 import androidx.compose.material.icons.rounded.Wallet
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
@@ -250,7 +250,7 @@ fun CommonCardButton(
                 Icon(
                     modifier = Modifier
                         .fillMaxHeight(),
-                    imageVector = Icons.AutoMirrored.Rounded.ArrowRight,
+                    painter = HeroIcons.ArrowRight.painter(),
                     contentDescription = null,
                 )
             }
