@@ -16,6 +16,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -26,9 +27,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import partier.composeapp.generated.resources.Res
+import partier.composeapp.generated.resources.ic_arrow_right
 import partier.composeapp.generated.resources.nav_back
 import se.atte.partier.components.CommonCard
 import se.atte.partier.components.standardPaddingMedium
@@ -163,11 +166,7 @@ private fun PartyCard(
             }
 
             // Arrow indicator
-            Text(
-                text = "→",
-                style = MaterialTheme.typography.titleLarge,
-                color = MaterialTheme.colorScheme.primary
-            )
+            Icon(painter = painterResource(Res.drawable.ic_arrow_right), contentDescription = null)
         }
     }
 }
