@@ -5,7 +5,7 @@
   "budgetCategories": [
     {
       "id": "government_administration",
-      "name": "Rikets styrelse",
+      "name": "1. Rikets styrelse",
       "description": "Regeringens administration och statsrådsberedningen",
       "displayOrder": 1,
       "partyBudgets": [
@@ -300,7 +300,7 @@
     },
     {
       "id": "public_economics",
-      "name": "Samhällsekonomi och finansförvaltning",
+      "name": "2. Samhällsekonomi och finansförvaltning",
       "description": "Ekonomisk politik och finansförvaltning",
       "displayOrder": 2,
       "partyBudgets": [
@@ -633,7 +633,7 @@
     },
     {
       "id": "tax_customs",
-      "name": "Skatt, tull och exekution",
+      "name": "3. Skatt, tull och exekution",
       "description": "Skattemyndigheter, tullverket och kronofogdemyndigheten",
       "displayOrder": 3,
       "partyBudgets": [
@@ -766,9 +766,9 @@
     },
     {
       "id": "municipal_grants",
-      "name": "Allmänna bidrag till kommuner",
+      "name": "4. Allmänna bidrag till kommuner",
       "description": "Finansierar välfärdstjänster som skola, sjukvård och social omsorg",
-      "displayOrder": 25,
+      "displayOrder": 4,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -809,9 +809,9 @@
     },
     {
       "id": "sickness_benefits",
-      "name": "Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
+      "name": "5. Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
       "description": "Sjukförsäkring, ersättningar och stöd till personer med funktionsnedsättning",
-      "displayOrder": 10,
+      "displayOrder": 5,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -852,9 +852,9 @@
     },
     {
       "id": "healthcare",
-      "name": "Hälsovård, sjukvård och social omsorg",
+      "name": "6. Hälsovård, sjukvård och social omsorg",
       "description": "Allmän hälso- och sjukvård samt social omsorg",
-      "displayOrder": 9,
+      "displayOrder": 6,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -895,9 +895,9 @@
     },
     {
       "id": "family_support",
-      "name": "Ekonomisk trygghet för familjer och barn",
+      "name": "7. Ekonomisk trygghet för familjer och barn",
       "description": "Barnbidrag, föräldrapenning och andra familjestöd",
-      "displayOrder": 12,
+      "displayOrder": 7,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -938,9 +938,9 @@
     },
     {
       "id": "pension_benefits",
-      "name": "Ekonomisk trygghet vid ålderdom",
+      "name": "9. Ekonomisk trygghet vid ålderdom",
       "description": "Pensioner och ålderspension",
-      "displayOrder": 11,
+      "displayOrder": 9,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -981,9 +981,9 @@
     },
     {
       "id": "integration_equality",
-      "name": "Integration och jämställdhet",
+      "name": "10. Integration och jämställdhet",
       "description": "Integration, jämställdhet och diskrimineringsfrågor",
-      "displayOrder": 13,
+      "displayOrder": 10,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1024,9 +1024,9 @@
     },
     {
       "id": "labor_market",
-      "name": "Arbetsmarknad och arbetsliv",
+      "name": "11. Arbetsmarknad och arbetsliv",
       "description": "Arbetsmarknadspolitik, arbetsförmedling och arbetslivsutveckling",
-      "displayOrder": 14,
+      "displayOrder": 11,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1067,9 +1067,9 @@
     },
     {
       "id": "study_support",
-      "name": "Studiestöd",
+      "name": "12. Studiestöd",
       "description": "Studiebidrag och studielån",
-      "displayOrder": 15,
+      "displayOrder": 12,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1110,9 +1110,9 @@
     },
     {
       "id": "education",
-      "name": "Utbildning och universitetsforskning",
+      "name": "13. Utbildning och universitetsforskning",
       "description": "Grundskola, gymnasium, universitet och forskning",
-      "displayOrder": 16,
+      "displayOrder": 13,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1153,9 +1153,9 @@
     },
     {
       "id": "international_aid",
-      "name": "Internationellt bistånd",
+      "name": "14. Internationellt bistånd",
       "description": "Utvecklingsbistånd och humanitärt bistånd",
-      "displayOrder": 7,
+      "displayOrder": 14,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1196,7 +1196,7 @@
     },
     {
       "id": "migration",
-      "name": "Migration",
+      "name": "8. Migration",
       "description": "Migrationsverket och asylprocessen",
       "displayOrder": 8,
       "partyBudgets": [
@@ -1369,9 +1369,9 @@
     },
     {
       "id": "defense",
-      "name": "Försvar och samhällets krisberedskap",
+      "name": "15. Försvar och samhällets krisberedskap",
       "description": "Försvarsmakt, civilförsvar och säkerhetspolitik",
-      "displayOrder": 6,
+      "displayOrder": 15,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1412,9 +1412,9 @@
     },
     {
       "id": "justice",
-      "name": "Rättsväsendet",
+      "name": "16. Rättsväsendet",
       "description": "Domstolar, åklagare och kriminalvård",
-      "displayOrder": 4,
+      "displayOrder": 16,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1455,9 +1455,9 @@
     },
     {
       "id": "transport",
-      "name": "Kommunikationer",
+      "name": "17. Kommunikationer",
       "description": "Vägar, järnvägar och kollektivtrafik",
-      "displayOrder": 22,
+      "displayOrder": 17,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1498,9 +1498,9 @@
     },
     {
       "id": "environment",
-      "name": "Klimat, miljö och natur",
+      "name": "18. Klimat, miljö och natur",
       "description": "Miljöskydd, klimatåtgärder och naturvård",
-      "displayOrder": 20,
+      "displayOrder": 18,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1541,9 +1541,9 @@
     },
     {
       "id": "culture",
-      "name": "Kultur, medier, trossamfund och fritid",
+      "name": "19. Kultur, medier, trossamfund och fritid",
       "description": "Kulturstöd, public service och idrott",
-      "displayOrder": 17,
+      "displayOrder": 19,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1584,9 +1584,9 @@
     },
     {
       "id": "foreign_affairs",
-      "name": "Internationell samverkan",
+      "name": "20. Internationell samverkan",
       "description": "Diplomati, utvecklingssamarbete och internationella organisationer",
-      "displayOrder": 5,
+      "displayOrder": 20,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1627,9 +1627,9 @@
     },
     {
       "id": "agriculture",
-      "name": "Areella näringar, landsbygd och livsmedel",
+      "name": "21. Areella näringar, landsbygd och livsmedel",
       "description": "Lantbruksstöd, skogsbruk och fiskeripolitik",
-      "displayOrder": 23,
+      "displayOrder": 21,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1670,9 +1670,9 @@
     },
     {
       "id": "business_sector",
-      "name": "Näringsliv",
+      "name": "22. Näringsliv",
       "description": "Näringslivspolitik och företagsstöd",
-      "displayOrder": 24,
+      "displayOrder": 22,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1713,9 +1713,9 @@
     },
     {
       "id": "energy",
-      "name": "Energi",
+      "name": "23. Energi",
       "description": "Energipolitik, näringslivsstöd och regional utveckling",
-      "displayOrder": 21,
+      "displayOrder": 23,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1756,9 +1756,9 @@
     },
     {
       "id": "housing",
-      "name": "Bostadsförsörjning och byggande",
+      "name": "24. Bostadsförsörjning och byggande",
       "description": "Bostadspolitik, hyresreglering och byggande",
-      "displayOrder": 18,
+      "displayOrder": 24,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1799,9 +1799,9 @@
     },
     {
       "id": "regional_development",
-      "name": "Regional utveckling",
+      "name": "25. Regional utveckling",
       "description": "Regional utveckling och landsbygdspolitik",
-      "displayOrder": 19,
+      "displayOrder": 25,
       "partyBudgets": [
         {
           "partyCode": "SD",
@@ -1842,7 +1842,7 @@
     },
     {
       "id": "debt_interest",
-      "name": "Statsskuldsräntor m.m.",
+      "name": "26. Statsskuldsräntor m.m.",
       "description": "Räntor på statsskuld och finansiella kostnader",
       "displayOrder": 26,
       "partyBudgets": [
@@ -1885,7 +1885,7 @@
     },
     {
       "id": "eu_fee",
-      "name": "Avgiften till Europeiska unionen",
+      "name": "27. Avgiften till Europeiska unionen",
       "description": "Sveriges avgift till Europeiska unionen",
       "displayOrder": 27,
       "partyBudgets": [
@@ -1925,7 +1925,7 @@
   "incomeCategories": [
     {
       "id": "tax_income",
-      "name": "Statens skatteinkomster",
+      "name": "1. Statens skatteinkomster",
       "description": "Inkomster från skatter och avgifter",
       "displayOrder": 1,
       "partyBudgets": [
@@ -1968,7 +1968,7 @@
     },
     {
       "id": "activity_income",
-      "name": "Inkomster av statens verksamhet",
+      "name": "2. Inkomster av statens verksamhet",
       "description": "Inkomster från statliga verksamheter",
       "displayOrder": 2,
       "partyBudgets": [
@@ -2011,7 +2011,7 @@
     },
     {
       "id": "property_sales",
-      "name": "Inkomster av försåld egendom",
+      "name": "3. Inkomster av försåld egendom",
       "description": "Inkomster från försäljning av statlig egendom",
       "displayOrder": 3,
       "partyBudgets": [
@@ -2054,7 +2054,7 @@
     },
     {
       "id": "loan_repayments",
-      "name": "Återbetalning av lån",
+      "name": "4. Återbetalning av lån",
       "description": "Återbetalningar av utgivna lån",
       "displayOrder": 4,
       "partyBudgets": [
@@ -2097,7 +2097,7 @@
     },
     {
       "id": "calculated_income",
-      "name": "Kalkylmässiga inkomster",
+      "name": "5. Kalkylmässiga inkomster",
       "description": "Beräknade inkomster och justeringar",
       "displayOrder": 5,
       "partyBudgets": [
@@ -2140,7 +2140,7 @@
     },
     {
       "id": "eu_grants",
-      "name": "Bidrag m.m. från EU",
+      "name": "6. Bidrag m.m. från EU",
       "description": "Bidrag och stöd från Europeiska unionen",
       "displayOrder": 6,
       "partyBudgets": [
@@ -2183,7 +2183,7 @@
     },
     {
       "id": "tax_system_adjustments",
-      "name": "Avräkningar m.m. i anslutning till skattesystemet",
+      "name": "7. Avräkningar m.m. i anslutning till skattesystemet",
       "description": "Justeringar och avräkningar i skattesystemet",
       "displayOrder": 7,
       "partyBudgets": [
@@ -2226,7 +2226,7 @@
     },
     {
       "id": "expense_credits",
-      "name": "Utgifter som redovisas som krediteringar på skattekonto",
+      "name": "8. Utgifter som redovisas som krediteringar på skattekonto",
       "description": "Utgifter som redovisas som krediteringar på skattekonto",
       "displayOrder": 8,
       "partyBudgets": [
