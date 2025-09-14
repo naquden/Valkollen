@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -20,6 +21,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import se.atte.partier.components.CommonCardButton
+import se.atte.partier.components.HeroIcons
+import se.atte.partier.components.painter
 import se.atte.partier.components.standardPaddingMedium
 import se.atte.partier.data.BudgetCategory
 import se.atte.partier.data.SampleData
@@ -40,10 +43,19 @@ fun IncomeScreen(
         modifier = modifier,
         topBar = {
             TopAppBar(
-                title = {},
+                title = { 
+                    Text(
+                        text = "Inkomster",
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                },
                 navigationIcon = {
                     TextButton(onClick = onBackClick) {
-                        Text("← Tillbaka")
+                        Icon(
+                            painter = HeroIcons.ArrowBack.painter(),
+                            contentDescription = "Tillbaka"
+                        )
                     }
                 }
             )

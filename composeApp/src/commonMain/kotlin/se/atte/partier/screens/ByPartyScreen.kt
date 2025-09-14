@@ -11,6 +11,8 @@ import org.jetbrains.compose.resources.stringResource
 import partier.composeapp.generated.resources.Res
 import partier.composeapp.generated.resources.nav_back
 import se.atte.partier.components.CommonCard
+import se.atte.partier.components.HeroIcons
+import se.atte.partier.components.painter
 import se.atte.partier.data.SampleData
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -34,7 +36,10 @@ fun ByPartyScreen(
             },
             navigationIcon = {
                 TextButton(onClick = onBackClick) {
-                    Text(stringResource(Res.string.nav_back))
+                    Icon(
+                        painter = HeroIcons.ArrowBack.painter(),
+                        contentDescription = "Tillbaka"
+                    )
                 }
             }
         )

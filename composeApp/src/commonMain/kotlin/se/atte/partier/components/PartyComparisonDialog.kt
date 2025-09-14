@@ -72,7 +72,10 @@ fun PartyComparisonDialog(
                             TextButton(
                                 onClick = { selectedPartyCode = null }
                             ) {
-                                Text("← Tillbaka")
+                                Icon(
+                                    painter = HeroIcons.ArrowBack.painter(),
+                                    contentDescription = "Tillbaka"
+                                )
                             }
                         }
 

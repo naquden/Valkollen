@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 import partier.composeapp.generated.resources.Res
+import partier.composeapp.generated.resources.ic_arrow_back
 import partier.composeapp.generated.resources.ic_arrow_right
 import partier.composeapp.generated.resources.ic_expense
 import partier.composeapp.generated.resources.ic_income
@@ -33,6 +34,11 @@ object HeroIcons {
      * Arrow right icon - represents navigation/forward direction
      */
     val ArrowRight = Res.drawable.ic_arrow_right
+    
+    /**
+     * Arrow back icon - represents navigation/back direction
+     */
+    val ArrowBack = Res.drawable.ic_arrow_back
 }
 
 /**

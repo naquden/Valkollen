@@ -35,6 +35,8 @@ import partier.composeapp.generated.resources.Res
 import partier.composeapp.generated.resources.ic_arrow_right
 import partier.composeapp.generated.resources.nav_back
 import se.atte.partier.components.CommonCard
+import se.atte.partier.components.HeroIcons
+import se.atte.partier.components.painter
 import se.atte.partier.components.standardPaddingMedium
 import se.atte.partier.components.standardPaddingSmall
 import se.atte.partier.constants.Party
@@ -60,7 +62,10 @@ fun PartySelectionScreen(
             },
             navigationIcon = {
                 TextButton(onClick = onBackClick) {
-                    Text(stringResource(Res.string.nav_back))
+                    Icon(
+                        painter = HeroIcons.ArrowBack.painter(),
+                        contentDescription = "Tillbaka"
+                    )
                 }
             }
         )

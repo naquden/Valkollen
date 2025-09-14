@@ -37,7 +37,9 @@ import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import se.atte.partier.components.CommonCard
 import se.atte.partier.components.CommonCardButton
+import se.atte.partier.components.HeroIcons
 import se.atte.partier.components.PartyComparisonDialog
+import se.atte.partier.components.painter
 import se.atte.partier.components.standardPaddingMedium
 import se.atte.partier.components.standardPaddingSmall
 import se.atte.partier.constants.Party
@@ -106,7 +108,10 @@ fun PartyDetailScreen(
                 },
                 navigationIcon = {
                     TextButton(onClick = onBackClick) {
-                        Text("← Tillbaka")
+                        Icon(
+                            painter = HeroIcons.ArrowBack.painter(),
+                            contentDescription = "Tillbaka"
+                        )
                     }
                 }
             )
