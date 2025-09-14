@@ -41,6 +41,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 17.3,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 18.685,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -79,6 +84,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 17.0,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 20.891,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -117,6 +127,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 12.8,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 16.954,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -155,6 +170,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 153.5,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 181.280,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -193,6 +213,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 88.1,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 117.137,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -231,6 +256,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 111.5,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 111.298,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -269,6 +299,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 99.9,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 109.621,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -307,6 +342,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 41.3,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 60.310,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -345,6 +385,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 6.4,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 20.0,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -383,6 +428,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 93.1,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 93.129,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -421,6 +471,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 27.8,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 30.565,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -459,6 +514,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 100.9,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 101.286,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -497,6 +557,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 51.9,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 49.630,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -535,6 +600,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 8.5,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 13.808,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -573,6 +643,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 76.6,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 126.060,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -611,6 +686,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 62.6,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 76.128,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -649,6 +729,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 78.6,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 83.425,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -687,6 +772,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 22.2,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 20.187,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -725,6 +815,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 18.2,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 17.196,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -763,6 +858,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 2.2,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 2.274,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -801,6 +901,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 22.2,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 24.211,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -839,6 +944,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 9.3,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 9.737,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -877,6 +987,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 4.6,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 5.664,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -915,6 +1030,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 5.1,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 6.599,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -953,6 +1073,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 5.3,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 8.802,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -991,6 +1116,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 12.2,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 20.455,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -1069,6 +1199,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 2351.8,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 1369.407,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -1107,6 +1242,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 43.8,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 47.890,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -1145,6 +1285,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 5.0,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 5.000,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -1183,6 +1328,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 0.5,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 0.615,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -1221,6 +1371,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 18.0,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 22.164,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -1259,6 +1414,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 27.8,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 48.675,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -1297,6 +1457,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": -126.6,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 0.0,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     },
@@ -1335,6 +1500,11 @@ object BudgetDataJson {
           "partyCode": "L",
           "budgetAmount": 0.0,
           "sourceUrl": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF"
+        },
+        {
+          "partyCode": "S",
+          "budgetAmount": 0.0,
+          "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
     }
