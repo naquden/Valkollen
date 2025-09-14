@@ -23,10 +23,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Link
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -50,7 +49,6 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import partier.composeapp.generated.resources.Res
 import partier.composeapp.generated.resources.billion_kr
-import partier.composeapp.generated.resources.budget_proposal
 import partier.composeapp.generated.resources.nav_back
 import partier.composeapp.generated.resources.parties_budget_proposals
 import se.atte.partier.components.CommonCard
@@ -74,7 +72,7 @@ fun CategoryDetailScreen(
     partyBudgetLoader: (String) -> List<PartyBudget> = { categoryId -> SampleData.getPartyBudgetsForCategory(categoryId) }
 ) {
     var expandedPartyCode by remember { mutableStateOf<String?>(null) }
-    
+
     Scaffold(
         modifier = modifier,
         topBar = {
@@ -83,7 +81,7 @@ fun CategoryDetailScreen(
                     Text(
                         text = category.name,
                         style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.SemiBold
+                        fontWeight = FontWeight.SemiBold,
                     )
                 },
                 navigationIcon = {
@@ -100,24 +98,6 @@ fun CategoryDetailScreen(
         ) {
             val partyBudgets = remember(category.id) {
                 partyBudgetLoader(category.id)
-            }
-            CommonCard(
-                modifier = Modifier.fillMaxWidth(),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                )
-            ) {
-                Text(
-                    modifier = Modifier.padding(standardPaddingMedium),
-                    text = category.description,
-                    style = MaterialTheme.typography.bodyMedium,
-                )
-                Text(
-                    modifier = Modifier.padding(standardPaddingMedium),
-                    text = stringResource(Res.string.budget_proposal),
-                    style = MaterialTheme.typography.bodyMedium,
-                )
             }
 
             if (partyBudgets.isNotEmpty()) {
@@ -307,7 +287,7 @@ private fun SubcategoryBarChart(
             modifier = Modifier.padding(bottom = 8.dp),
             text = "Underkategorier",
         )
-        
+
         subcategories.forEachIndexed { index, subcategory ->
             val partyBudget = subcategory.partyBudgets.find { it.partyCode == partyCode }
             if (partyBudget != null) {
@@ -318,7 +298,7 @@ private fun SubcategoryBarChart(
                     color = color,
                     mainCategoryTotal = mainCategoryTotal
                 )
-                
+
                 // Add divider between items (except after last item)
                 if (index < subcategories.size - 1) {
                     HorizontalDivider(
@@ -467,44 +447,44 @@ private fun getPartyColor(partyCode: String): Color {
 @Composable
 fun PreviewCategoryDetailScreen() {
     ThemePreview {
-         val mockCategory = BudgetCategory(
-             id = "healthcare",
-             name = "Hälsovård, sjukvård och social omsorg",
-             description = "Budget för hälsovård och sjukvård",
-             displayOrder = 1,
-             partyBudgets = emptyList(), // Will be loaded by partyBudgetLoader
-             subcategories = listOf(
-                 Subcategory(
-                     code = "1:1",
-                     name = "Primärvård och specialiserad vård",
-                     partyBudgets = listOf(
-                         PartyBudget(partyCode = "S", budgetAmount = 120.5, sourceUrl = "https://example.com/s"),
-                         PartyBudget(partyCode = "M", budgetAmount = 110.0, sourceUrl = "https://example.com/m"),
-                         PartyBudget(partyCode = "SD", budgetAmount = 130.2, sourceUrl = "https://example.com/sd"),
-                         PartyBudget(partyCode = "V", budgetAmount = 125.8, sourceUrl = "https://example.com/v")
-                     )
-                 ),
-                 Subcategory(
-                     code = "1:2",
-                     name = "Social omsorg och äldreomsorg",
-                     partyBudgets = listOf(
-                         PartyBudget(partyCode = "S", budgetAmount = 200.0, sourceUrl = "https://example.com/s"),
-                         PartyBudget(partyCode = "M", budgetAmount = 180.0, sourceUrl = "https://example.com/m"),
-                         PartyBudget(partyCode = "SD", budgetAmount = 220.0, sourceUrl = "https://example.com/sd"),
-                         PartyBudget(partyCode = "V", budgetAmount = 210.0, sourceUrl = "https://example.com/v")
-                     )
-                 )
-             )
-         )
-         val mockPartyBudgets = listOf(
-             PartyBudget(partyCode = "S", budgetAmount = 450.5, sourceUrl = "https://example.com/s"),
-             PartyBudget(partyCode = "M", budgetAmount = 420.0, sourceUrl = "https://example.com/m"),
-             PartyBudget(partyCode = "SD", budgetAmount = 480.2, sourceUrl = "https://example.com/sd"),
-             PartyBudget(partyCode = "V", budgetAmount = 460.8, sourceUrl = "https://example.com/v")
-         )
+        val mockCategory = BudgetCategory(
+            id = "healthcare",
+            name = "Hälsovård, sjukvård och social omsorg",
+            description = "Budget för hälsovård och sjukvård",
+            displayOrder = 1,
+            partyBudgets = emptyList(), // Will be loaded by partyBudgetLoader
+            subcategories = listOf(
+                Subcategory(
+                    code = "1:1",
+                    name = "Primärvård och specialiserad vård",
+                    partyBudgets = listOf(
+                        PartyBudget(partyCode = "S", budgetAmount = 120.5, sourceUrl = "https://example.com/s"),
+                        PartyBudget(partyCode = "M", budgetAmount = 110.0, sourceUrl = "https://example.com/m"),
+                        PartyBudget(partyCode = "SD", budgetAmount = 130.2, sourceUrl = "https://example.com/sd"),
+                        PartyBudget(partyCode = "V", budgetAmount = 125.8, sourceUrl = "https://example.com/v")
+                    )
+                ),
+                Subcategory(
+                    code = "1:2",
+                    name = "Social omsorg och äldreomsorg",
+                    partyBudgets = listOf(
+                        PartyBudget(partyCode = "S", budgetAmount = 200.0, sourceUrl = "https://example.com/s"),
+                        PartyBudget(partyCode = "M", budgetAmount = 180.0, sourceUrl = "https://example.com/m"),
+                        PartyBudget(partyCode = "SD", budgetAmount = 220.0, sourceUrl = "https://example.com/sd"),
+                        PartyBudget(partyCode = "V", budgetAmount = 210.0, sourceUrl = "https://example.com/v")
+                    )
+                )
+            )
+        )
+        val mockPartyBudgets = listOf(
+            PartyBudget(partyCode = "S", budgetAmount = 450.5, sourceUrl = "https://example.com/s"),
+            PartyBudget(partyCode = "M", budgetAmount = 420.0, sourceUrl = "https://example.com/m"),
+            PartyBudget(partyCode = "SD", budgetAmount = 480.2, sourceUrl = "https://example.com/sd"),
+            PartyBudget(partyCode = "V", budgetAmount = 460.8, sourceUrl = "https://example.com/v")
+        )
         CategoryDetailScreen(
-            modifier = Modifier.fillMaxSize(), 
-            category = mockCategory, 
+            modifier = Modifier.fillMaxSize(),
+            category = mockCategory,
             onBackClick = {},
             partyBudgetLoader = { mockPartyBudgets }
         )
@@ -515,44 +495,44 @@ fun PreviewCategoryDetailScreen() {
 @Composable
 fun PreviewCategoryDetailScreen_Dark() {
     ThemePreview(useDarkMode = true) {
-         val mockCategory = BudgetCategory(
-             id = "education",
-             name = "Utbildning och universitetsforskning",
-             description = "Budget för utbildning och forskning",
-             displayOrder = 2,
-             partyBudgets = emptyList(), // Will be loaded by partyBudgetLoader
-             subcategories = listOf(
-                 Subcategory(
-                     code = "2:1",
-                     name = "Grundskola och gymnasieskola",
-                     partyBudgets = listOf(
-                         PartyBudget(partyCode = "S", budgetAmount = 150.0, sourceUrl = "https://example.com/s"),
-                         PartyBudget(partyCode = "M", budgetAmount = 140.0, sourceUrl = "https://example.com/m"),
-                         PartyBudget(partyCode = "SD", budgetAmount = 160.0, sourceUrl = "https://example.com/sd"),
-                         PartyBudget(partyCode = "V", budgetAmount = 155.0, sourceUrl = "https://example.com/v")
-                     )
-                 ),
-                 Subcategory(
-                     code = "2:2",
-                     name = "Högskola och universitet",
-                     partyBudgets = listOf(
-                         PartyBudget(partyCode = "S", budgetAmount = 100.0, sourceUrl = "https://example.com/s"),
-                         PartyBudget(partyCode = "M", budgetAmount = 95.0, sourceUrl = "https://example.com/m"),
-                         PartyBudget(partyCode = "SD", budgetAmount = 110.0, sourceUrl = "https://example.com/sd"),
-                         PartyBudget(partyCode = "V", budgetAmount = 105.0, sourceUrl = "https://example.com/v")
-                     )
-                 )
-             )
-         )
-         val mockPartyBudgets = listOf(
-             PartyBudget(partyCode = "S", budgetAmount = 380.2, sourceUrl = "https://example.com/s"),
-             PartyBudget(partyCode = "M", budgetAmount = 350.8, sourceUrl = "https://example.com/m"),
-             PartyBudget(partyCode = "SD", budgetAmount = 400.1, sourceUrl = "https://example.com/sd"),
-             PartyBudget(partyCode = "V", budgetAmount = 420.1, sourceUrl = "https://example.com/v")
-         )
+        val mockCategory = BudgetCategory(
+            id = "education",
+            name = "Utbildning och universitetsforskning",
+            description = "Budget för utbildning och forskning",
+            displayOrder = 2,
+            partyBudgets = emptyList(), // Will be loaded by partyBudgetLoader
+            subcategories = listOf(
+                Subcategory(
+                    code = "2:1",
+                    name = "Grundskola och gymnasieskola",
+                    partyBudgets = listOf(
+                        PartyBudget(partyCode = "S", budgetAmount = 150.0, sourceUrl = "https://example.com/s"),
+                        PartyBudget(partyCode = "M", budgetAmount = 140.0, sourceUrl = "https://example.com/m"),
+                        PartyBudget(partyCode = "SD", budgetAmount = 160.0, sourceUrl = "https://example.com/sd"),
+                        PartyBudget(partyCode = "V", budgetAmount = 155.0, sourceUrl = "https://example.com/v")
+                    )
+                ),
+                Subcategory(
+                    code = "2:2",
+                    name = "Högskola och universitet",
+                    partyBudgets = listOf(
+                        PartyBudget(partyCode = "S", budgetAmount = 100.0, sourceUrl = "https://example.com/s"),
+                        PartyBudget(partyCode = "M", budgetAmount = 95.0, sourceUrl = "https://example.com/m"),
+                        PartyBudget(partyCode = "SD", budgetAmount = 110.0, sourceUrl = "https://example.com/sd"),
+                        PartyBudget(partyCode = "V", budgetAmount = 105.0, sourceUrl = "https://example.com/v")
+                    )
+                )
+            )
+        )
+        val mockPartyBudgets = listOf(
+            PartyBudget(partyCode = "S", budgetAmount = 380.2, sourceUrl = "https://example.com/s"),
+            PartyBudget(partyCode = "M", budgetAmount = 350.8, sourceUrl = "https://example.com/m"),
+            PartyBudget(partyCode = "SD", budgetAmount = 400.1, sourceUrl = "https://example.com/sd"),
+            PartyBudget(partyCode = "V", budgetAmount = 420.1, sourceUrl = "https://example.com/v")
+        )
         CategoryDetailScreen(
-            modifier = Modifier.fillMaxSize(), 
-            category = mockCategory, 
+            modifier = Modifier.fillMaxSize(),
+            category = mockCategory,
             onBackClick = {},
             partyBudgetLoader = { mockPartyBudgets }
         )

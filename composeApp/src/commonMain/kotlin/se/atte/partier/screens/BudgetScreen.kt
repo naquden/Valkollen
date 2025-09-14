@@ -41,7 +41,7 @@ fun BudgetScreen(
     Column(modifier = modifier) {
         // Header
         Text(
-            modifier = Modifier.padding(bottom = standardPaddingSmall),
+            modifier = Modifier.padding(vertical = standardPaddingSmall),
             text = "Sveriges Budget $year",
             style = MaterialTheme.typography.headlineLarge,
             fontWeight = FontWeight.Bold,

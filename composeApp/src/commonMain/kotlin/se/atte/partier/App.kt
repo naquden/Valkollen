@@ -60,7 +60,7 @@ sealed class Screen {
 @Composable
 @Preview
 fun App() {
-    AppTheme(useDarkMode = false) {
+    AppTheme {
         // Initialize SampleData
         LaunchedEffect(Unit) {
             SampleData.initialize()

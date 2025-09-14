@@ -56,6 +56,7 @@ fun ExpenseScreen(
             verticalArrangement = Arrangement.spacedBy(standardPaddingMedium)
         ) {
             Text(
+                modifier = Modifier.padding(vertical = standardPaddingSmall),
                 text = "Sveriges Budget $year",
                 style = MaterialTheme.typography.headlineLarge,
                 fontWeight = FontWeight.Bold,
