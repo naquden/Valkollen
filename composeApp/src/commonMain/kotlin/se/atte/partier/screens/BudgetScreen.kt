@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import se.atte.partier.components.CommonCard
 import se.atte.partier.components.CommonCardButton
 import se.atte.partier.components.HeroIcons
 import se.atte.partier.components.painter
@@ -55,6 +56,63 @@ fun BudgetScreen(
                 text = "${totalBudget.toInt()} miljarder kronor fördelas över olika områden",
                 style = MaterialTheme.typography.bodyMedium,
             )
+        }
+
+        // Help card
+        CommonCard(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = standardPaddingLarge)
+        ) {
+            Column(
+                modifier = Modifier.padding(standardPaddingMedium)
+            ) {
+                Text(
+                    text = "Välkommen till Sveriges Budget 2025",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary
+                )
+                
+                Text(
+                    modifier = Modifier.padding(top = standardPaddingSmall),
+                    text = "Upptäck hur staten spenderar dina skattepengar och jämför partiernas budgetförslag",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                
+                Text(
+                    modifier = Modifier.padding(top = standardPaddingMedium),
+                    text = "Utgifter - Utforska 27 olika budgetområden som sjukvård, skola, försvar och infrastruktur. Se exakt hur mycket som spenderas på varje område och jämför hur olika partier vill fördela pengarna.",
+                    style = MaterialTheme.typography.bodySmall
+                )
+                
+                Text(
+                    modifier = Modifier.padding(top = standardPaddingSmall),
+                    text = "Inkomster - Lär dig var statens pengar kommer ifrån - skatter, avgifter och andra inkomstkällor.",
+                    style = MaterialTheme.typography.bodySmall
+                )
+                
+                Text(
+                    modifier = Modifier.padding(top = standardPaddingSmall),
+                    text = "Per parti - Jämför partiernas budgetförslag sida vid sida. Se vilka prioriteringar varje parti har och hur de vill spendera dina skattepengar.",
+                    style = MaterialTheme.typography.bodySmall
+                )
+                
+                Text(
+                    modifier = Modifier.padding(top = standardPaddingMedium),
+                    text = "Tips: Tryck på valfritt område för att se detaljerade uppdelningar och partijämförelser. Alla siffror visas i miljarder kronor för enkel jämförelse.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.primary
+                )
+                
+                Text(
+                    modifier = Modifier.padding(top = standardPaddingMedium),
+                    text = "Obs: Denna app är under utveckling. Full funktionalitet kommer när partierna publicerat sina officiella budgetförslag inför nästa val.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.error
+                )
+            }
         }
 
         // View options
