@@ -57,7 +57,8 @@ import se.atte.partier.utils.openUrl
 fun CategoryDetailScreen(
     modifier: Modifier = Modifier,
     category: BudgetCategory,
-    onBackClick: () -> Unit
+    onBackClick: () -> Unit,
+    partyBudgetLoader: (String) -> List<PartyBudget> = { categoryId -> SampleData.getPartyBudgetsForCategory(categoryId) }
 ) {
     Scaffold(
         modifier = modifier,
@@ -83,7 +84,7 @@ fun CategoryDetailScreen(
             verticalArrangement = Arrangement.spacedBy(standardPaddingMedium)
         ) {
             val partyBudgets = remember(category.id) {
-                SampleData.getPartyBudgetsForCategory(category.id)
+                partyBudgetLoader(category.id)
             }
             CommonCard(
                 modifier = Modifier.fillMaxWidth(),
@@ -200,8 +201,9 @@ private fun BarChartItem(
                         imageVector = Icons.Default.Link,
                         contentDescription = "Öppna källa",
                         modifier = Modifier
-                            .size(16.dp)
-                            .clickable { openUrl(partyBudget.sourceUrl) },
+                            .clickable { openUrl(partyBudget.sourceUrl) }
+                            .padding(8.dp)
+                            .size(22.dp),
                         tint = MaterialTheme.colorScheme.primary
                     )
                 }
@@ -290,7 +292,25 @@ private fun getPartyColor(partyCode: String): Color {
 @Composable
 fun PreviewCategoryDetailScreen() {
     ThemePreview {
-        CategoryDetailScreen(modifier = Modifier.fillMaxSize(), category = SampleData.budgetCategories.first(), onBackClick = {})
+        val mockCategory = BudgetCategory(
+            id = "healthcare",
+            name = "Hälsovård, sjukvård och social omsorg",
+            description = "Budget för hälsovård och sjukvård",
+            displayOrder = 1,
+            partyBudgets = emptyList() // Will be loaded by partyBudgetLoader
+        )
+         val mockPartyBudgets = listOf(
+             PartyBudget(partyCode = "S", budgetAmount = 450.5, sourceUrl = "https://example.com/s"),
+             PartyBudget(partyCode = "M", budgetAmount = 420.0, sourceUrl = "https://example.com/m"),
+             PartyBudget(partyCode = "SD", budgetAmount = 480.2, sourceUrl = "https://example.com/sd"),
+             PartyBudget(partyCode = "V", budgetAmount = 460.8, sourceUrl = "https://example.com/v")
+         )
+        CategoryDetailScreen(
+            modifier = Modifier.fillMaxSize(), 
+            category = mockCategory, 
+            onBackClick = {},
+            partyBudgetLoader = { mockPartyBudgets }
+        )
     }
 }
 
@@ -298,7 +318,25 @@ fun PreviewCategoryDetailScreen() {
 @Composable
 fun PreviewCategoryDetailScreen_Dark() {
     ThemePreview(useDarkMode = true) {
-        CategoryDetailScreen(modifier = Modifier.fillMaxSize(), category = SampleData.budgetCategories.first(), onBackClick = {})
+        val mockCategory = BudgetCategory(
+            id = "education",
+            name = "Utbildning och universitetsforskning",
+            description = "Budget för utbildning och forskning",
+            displayOrder = 2,
+            partyBudgets = emptyList() // Will be loaded by partyBudgetLoader
+        )
+         val mockPartyBudgets = listOf(
+             PartyBudget(partyCode = "S", budgetAmount = 380.2, sourceUrl = "https://example.com/s"),
+             PartyBudget(partyCode = "M", budgetAmount = 350.8, sourceUrl = "https://example.com/m"),
+             PartyBudget(partyCode = "SD", budgetAmount = 400.1, sourceUrl = "https://example.com/sd"),
+             PartyBudget(partyCode = "V", budgetAmount = 420.1, sourceUrl = "https://example.com/v")
+         )
+        CategoryDetailScreen(
+            modifier = Modifier.fillMaxSize(), 
+            category = mockCategory, 
+            onBackClick = {},
+            partyBudgetLoader = { mockPartyBudgets }
+        )
     }
 }
 
