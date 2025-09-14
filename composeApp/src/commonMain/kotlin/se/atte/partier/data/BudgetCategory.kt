@@ -7,6 +7,7 @@ import kotlinx.serialization.Serializable
 data class BudgetData(
     val year: Int,
     val totalBudget: Double,
+    val unit: String,
     val budgetCategories: List<BudgetCategory>,
     val incomeCategories: List<BudgetCategory>
 )
@@ -17,6 +18,14 @@ data class BudgetCategory(
     val name: String,
     val description: String,
     val displayOrder: Int,
+    val partyBudgets: List<PartyBudget>,
+    val subcategories: List<Subcategory> = emptyList()
+)
+
+@Serializable
+data class Subcategory(
+    val code: String,
+    val name: String,
     val partyBudgets: List<PartyBudget>
 )
 

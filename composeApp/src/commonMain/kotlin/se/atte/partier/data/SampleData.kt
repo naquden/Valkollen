@@ -18,6 +18,9 @@ object SampleData {
     val totalBudget: Double
         get() = budgetData?.totalBudget ?: 0.0
 
+    val unit: String
+        get() = budgetData?.unit ?: "billions"
+
     val incomeCategories: List<BudgetCategory>
         get() = budgetData?.incomeCategories ?: emptyList()
 

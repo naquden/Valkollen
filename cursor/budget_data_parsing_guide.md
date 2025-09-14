@@ -3,6 +3,29 @@
 ## Overview
 This document outlines the complete process for identifying, extracting, and integrating budget data from Swedish government documents into our Compose Multiplatform application.
 
+## Data Unit Specification
+
+### ⚠️ CRITICAL: All Values in Billions
+**All budget amounts in the JSON data structure are stored in BILLIONS of Swedish Kronor (SEK).**
+
+- **Main category budgets**: Stored in billions (e.g., 19.1 = 19.1 billion SEK)
+- **Subcategory budgets**: Stored in billions (e.g., 0.162 = 0.162 billion SEK = 162 million SEK)
+- **Total budget**: Stored in billions (e.g., 1428.4 = 1,428.4 billion SEK)
+- **Unit field**: JSON includes `"unit": "billions"` to explicitly declare this
+
+### Conversion Requirements
+When parsing from source documents:
+- **From thousands of SEK**: Divide by 1,000,000 to get billions
+- **From millions of SEK**: Divide by 1,000 to get billions
+- **From billions of SEK**: Use values directly
+
+### Example Conversions
+```
+Source: 19,070,363 (thousands of SEK) → JSON: 19.070363 (billions)
+Source: 162,821 (millions of SEK) → JSON: 0.162821 (billions)
+Source: 1,428.4 (billions of SEK) → JSON: 1,428.4 (billions)
+```
+
 ## Main Categories Structure
 
 ### Current Main Categories (27 total)
@@ -103,15 +126,25 @@ Each subcategory follows this structure:
 
 ## Data Scale Conversion
 
-### Critical Scale Understanding
-- **Riksdagen documents**: Values in thousands of SEK
-- **Our JSON data**: Values in billions of SEK (thousands of millions)
-- **Conversion factor**: Divide Riksdagen values by 1,000,000
+### ⚠️ CRITICAL: All JSON Values Must Be in Billions
+**This section reinforces the unit specification above - ALL values in the JSON must be in billions of SEK.**
 
-### Example Conversion
+### Source Document Scales
+- **Riksdagen documents**: Values in thousands of SEK
+- **Regeringen PDFs**: May be in thousands, millions, or billions
+- **Our JSON data**: Values MUST be in billions of SEK (thousands of millions)
+- **Unit field**: JSON includes `"unit": "billions"` for explicit declaration
+
+### Conversion Factors
+- **From thousands of SEK**: Divide by 1,000,000 to get billions
+- **From millions of SEK**: Divide by 1,000 to get billions  
+- **From billions of SEK**: Use values directly
+
+### Example Conversions
 ```
-Riksdagen value: 19,070,363 (thousands of SEK)
-Our JSON value: 19.070363 (billions of SEK)
+Riksdagen value: 19,070,363 (thousands of SEK) → JSON: 19.070363 (billions)
+Source value: 162,821 (millions of SEK) → JSON: 0.162821 (billions)
+Source value: 1,428.4 (billions of SEK) → JSON: 1,428.4 (billions)
 ```
 
 ## Party Codes
@@ -154,7 +187,11 @@ Our JSON value: 19.070363 (billions of SEK)
 
 ### 1. Scale Confusion
 **Problem**: Mixing up thousands vs billions
-**Solution**: Always verify against existing data scale
+**Solution**: 
+- Always verify against existing data scale
+- Remember: ALL JSON values must be in billions of SEK
+- Use the `"unit": "billions"` field as reference
+- Double-check conversions: thousands ÷ 1,000,000 = billions
 
 ### 2. Missing Categories
 **Problem**: Not all 27 categories are present in every document
