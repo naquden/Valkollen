@@ -12,11 +12,15 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Link
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -163,8 +167,7 @@ private fun BarChartItem(
     } else 1.0
 
     CommonCard(
-        modifier = modifier
-            .clickable { openUrl(partyBudget.sourceUrl) },
+        modifier = modifier,
     ) {
         Column(
             modifier = Modifier.padding(standardPaddingMedium)
@@ -193,9 +196,13 @@ private fun BarChartItem(
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary
                     )
-                    Text(
-                        text = "🔗",
-                        style = MaterialTheme.typography.bodySmall
+                    Icon(
+                        imageVector = Icons.Default.Link,
+                        contentDescription = "Öppna källa",
+                        modifier = Modifier
+                            .size(16.dp)
+                            .clickable { openUrl(partyBudget.sourceUrl) },
+                        tint = MaterialTheme.colorScheme.primary
                     )
                 }
             }

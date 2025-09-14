@@ -1,19 +1,25 @@
 package se.atte.partier.data
 
 object SampleData {
-    private val budgetData by lazy { JsonFileLoader.loadBudgetData() }
+    private var budgetData: BudgetData? = null
+    
+    suspend fun initialize() {
+        if (budgetData == null) {
+            budgetData = JsonFileLoader.loadBudgetData()
+        }
+    }
     
     val budgetCategories: List<BudgetCategory>
-        get() = budgetData.budgetCategories
+        get() = budgetData?.budgetCategories ?: emptyList()
 
     val year: Int
-        get() = budgetData.year
+        get() = budgetData?.year ?: 2025
 
     val totalBudget: Double
-        get() = budgetData.totalBudget
+        get() = budgetData?.totalBudget ?: 0.0
 
     val incomeCategories: List<BudgetCategory>
-        get() = budgetData.incomeCategories
+        get() = budgetData?.incomeCategories ?: emptyList()
 
     fun getCategoryById(categoryId: String): BudgetCategory? {
         // First try budget categories

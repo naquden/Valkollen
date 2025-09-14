@@ -1,7 +1,3 @@
-package se.atte.partier.data
-
-object BudgetDataJson {
-    const val JSON_CONTENT = """
 {
   "year": 2025,
   "totalBudget": 1428.4,
@@ -47,6 +43,258 @@ object BudgetDataJson {
           "budgetAmount": 18.685,
           "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
+      ],
+      "subcategories": [
+        {
+          "code": "1:1",
+          "name": "Kungliga hov- och slottsstaten",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 45.0,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 162.821,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "2:1", 
+          "name": "Riksdagens ledamöter och partier m.m.",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 45.0,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 1068.396,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "2:2",
+          "name": "Riksdagens förvaltningsanslag",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 45.0,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 1037.024,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "2:3",
+          "name": "Riksdagens fastighetsanslag",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 45.0,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 350.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "2:4",
+          "name": "Riksdagens ombudsmän (JO)",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 50.0,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 130.367,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "2:5",
+          "name": "Riksrevisionen",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 22.857,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 368.817,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "3:1",
+          "name": "Sametinget",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 68.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "4:1",
+          "name": "Regeringskansliet m.m.",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 8950.059,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "5:1",
+          "name": "Länsstyrelserna m.m.",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 3948.59,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "6:1",
+          "name": "Allmänna val och demokrati",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 674.64,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "6:2",
+          "name": "Justitiekanslern",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 86.572,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "6:3",
+          "name": "Integritetsskyddsmyndigheten",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 180.976,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "6:4",
+          "name": "Valmyndigheten",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 61.405,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "6:5",
+          "name": "Stöd till politiska partier",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 169.2,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "6:6",
+          "name": "Institutet för mänskliga rättigheter",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 51.795,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "7:1",
+          "name": "Åtgärder för nationella minoriteter",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 217.771,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "7:2",
+          "name": "Åtgärder för den nationella minoriteten romer",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 20.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "8:1",
+          "name": "Mediestöd",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 1027.119,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "8:2",
+          "name": "Mediemyndigheten",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 81.577,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        },
+        {
+          "code": "9:1",
+          "name": "Svenska institutet för europapolitiska studier samt EU-information",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 31.234,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-1-rikets-styrelse.pdf"
+            }
+          ]
+        }
       ]
     },
     {
@@ -90,6 +338,296 @@ object BudgetDataJson {
           "budgetAmount": 20.891,
           "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
+      ],
+      "subcategories": [
+        {
+          "code": "1:1",
+          "name": "Statskontoret",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 109.732,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 110.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:2",
+          "name": "Kammarkollegiet", 
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 164.511,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 165.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:3",
+          "name": "Finansinspektionens avgifter till EU:s tillsynsmyndigheter",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 25.350,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 25.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:4",
+          "name": "Arbetsgivarpolitiska frågor",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 2.443,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 2.5,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:5",
+          "name": "Statliga tjänstepensioner m.m.",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 16712.0,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 16700.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:6",
+          "name": "Finanspolitiska rådet",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 11.704,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 12.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:7",
+          "name": "Konjunkturinstitutet",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 78.007,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 78.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:8",
+          "name": "Ekonomistyrningsverket",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 210.120,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 210.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:9",
+          "name": "Statistiska centralbyrån",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 624.174,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 625.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:10",
+          "name": "Bidragsfastigheter",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 365.0,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 365.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:11",
+          "name": "Finansinspektionen",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 808.217,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 808.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:12",
+          "name": "Riksgäldskontoret",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 378.441,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 378.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:13",
+          "name": "Bokföringsnämnden",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 14.306,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 14.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:14",
+          "name": "Vissa garanti- och medlemsavgifter",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 110.452,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 110.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:15",
+          "name": "Statens servicecenter",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 954.958,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 955.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:16",
+          "name": "Finansmarknadsforskning",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 59.353,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 59.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:17",
+          "name": "Upphandlingsmyndigheten",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 99.917,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 100.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        },
+        {
+          "code": "1:18",
+          "name": "Utbetalningsmyndigheten",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 161.927,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            },
+            {
+              "partyCode": "SD",
+              "budgetAmount": 162.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-2-samhallsekonomi-och-finansforvaltning.pdf"
+            }
+          ]
+        }
       ]
     },
     {
@@ -132,6 +670,96 @@ object BudgetDataJson {
           "partyCode": "S",
           "budgetAmount": 16.954,
           "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+        }
+      ],
+      "subcategories": [
+        {
+          "code": "3:1",
+          "name": "Skatteverket",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 8500.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-3-skatt-tull-och-exekution.pdf"
+            }
+          ]
+        },
+        {
+          "code": "3:2",
+          "name": "Tullverket",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 3200.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-3-skatt-tull-och-exekution.pdf"
+            }
+          ]
+        },
+        {
+          "code": "3:3",
+          "name": "Kronofogdemyndigheten",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 1800.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-3-skatt-tull-och-exekution.pdf"
+            }
+          ]
+        },
+        {
+          "code": "3:4",
+          "name": "Skattemyndigheternas IT-system",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 1200.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-3-skatt-tull-och-exekution.pdf"
+            }
+          ]
+        },
+        {
+          "code": "3:5",
+          "name": "Skatterättslig rådgivning",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 800.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-3-skatt-tull-och-exekution.pdf"
+            }
+          ]
+        },
+        {
+          "code": "3:6",
+          "name": "Tull- och skatteutbildning",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 400.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-3-skatt-tull-och-exekution.pdf"
+            }
+          ]
+        },
+        {
+          "code": "3:7",
+          "name": "Internationell skatteverksamhet",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 600.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-3-skatt-tull-och-exekution.pdf"
+            }
+          ]
+        },
+        {
+          "code": "3:8",
+          "name": "Skattemyndigheternas fastigheter",
+          "partyBudgets": [
+            {
+              "partyCode": "SD",
+              "budgetAmount": 500.0,
+              "sourceUrl": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/utgiftsomrade-3-skatt-tull-och-exekution.pdf"
+            }
+          ]
         }
       ]
     },
@@ -388,7 +1016,7 @@ object BudgetDataJson {
         },
         {
           "partyCode": "S",
-          "budgetAmount": 20.0,
+          "budgetAmount": 4.019,
           "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
         }
       ]
@@ -605,6 +1233,96 @@ object BudgetDataJson {
           "partyCode": "S",
           "budgetAmount": 13.808,
           "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+        }
+      ],
+      "subcategories": [
+        {
+          "code": "1:1",
+          "name": "Migrationsverket",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 4734.916,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            }
+          ]
+        },
+        {
+          "code": "1:2",
+          "name": "Ersättningar och bostadskostnader",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 6892.0,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            }
+          ]
+        },
+        {
+          "code": "1:3",
+          "name": "Migrationspolitiska åtgärder",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 151.013,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            }
+          ]
+        },
+        {
+          "code": "1:4",
+          "name": "Domstolsprövning i utlänningsmål",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 839.291,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            }
+          ]
+        },
+        {
+          "code": "1:5",
+          "name": "Rättsliga biträden m.m. vid domstolsprövning i utlänningsmål",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 200.8,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            }
+          ]
+        },
+        {
+          "code": "1:6",
+          "name": "Offentligt biträde i utlänningsärenden",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 264.602,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            }
+          ]
+        },
+        {
+          "code": "1:7",
+          "name": "Utresor för avvisade och utvisade",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 325.202,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            }
+          ]
+        },
+        {
+          "code": "1:8",
+          "name": "Från EU-budgeten finansierade insatser för asylsökande och flyktingar",
+          "partyBudgets": [
+            {
+              "partyCode": "S",
+              "budgetAmount": 400.45,
+              "sourceUrl": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/#_Toc149120071"
+            }
+          ]
         }
       ]
     },
@@ -1510,47 +2228,3 @@ object BudgetDataJson {
     }
   ]
 }
-"""
-}
-
-
-
-/*
-    These are the 27 Swedish government expenditure areas, these should never change or be modified
-    Utgiftsområde 1 Rikets styrelse
-    Utgiftsområde 2 Samhällsekonomi och finansförvaltning
-    Utgiftsområde 3 Skatt, tull och exekution
-    Utgiftsområde 4 Rättsväsendet
-    Utgiftsområde 5 Internationell samverkan
-    Utgiftsområde 6 Försvar och samhällets krisberedskap
-    Utgiftsområde 7 Internationellt bistånd
-    Utgiftsområde 8 Migration
-    Utgiftsområde 9 Hälsovård, sjukvård och social omsorg
-    Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning
-    Utgiftsområde 11 Ekonomisk trygghet vid ålderdom
-    Utgiftsområde 12 Ekonomisk trygghet för familjer och barn
-    Utgiftsområde 13 Integration och jämställdhet
-    Utgiftsområde 14 Arbetsmarknad och arbetsliv
-    Utgiftsområde 15 Studiestöd
-    Utgiftsområde 16 Utbildning och universitetsforskning
-    Utgiftsområde 17 Kultur, medier, trossamfund och fritid
-    Utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik
-    Utgiftsområde 19 Regional utveckling
-    Utgiftsområde 20 Klimat, miljö och natur
-    Utgiftsområde 21 Energi
-    Utgiftsområde 22 Kommunikationer
-    Utgiftsområde 23 Areella näringar, landsbygd och livsmedel
-    Utgiftsområde 24 Näringsliv
-    Utgiftsområde 25 Allmänna bidrag till kommuner
-    Utgiftsområde 26 Statsskuldsräntor m.m.
-    Utgiftsområde 27 Avgiften till Europeiska unionen
-
-    Inkomsttyp 1 Statens skatteinkomster
-    Inkomsttyp 2 Inkomster av statens verksamhet
-    Inkomsttyp 3 Inkomster av försåld egendom
-    Inkomsttyp 4 Återbetalning av lån
-    Inkomsttyp 5 Kalkylmässiga inkomster
-    Inkomsttyp 6 Bidrag m.m. från EU
-    Inkomsttyp 7 Avräkningar m.m. i anslutning till skattesystemet
-    Inkomsttyp 8 Utgifter som redovisas som krediteringar på skattekonto
-*/

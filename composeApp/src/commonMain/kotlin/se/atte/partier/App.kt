@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
@@ -60,6 +61,11 @@ sealed class Screen {
 @Preview
 fun App() {
     AppTheme(useDarkMode = false) {
+        // Initialize SampleData
+        LaunchedEffect(Unit) {
+            SampleData.initialize()
+        }
+        
         BoxWithConstraints {
             val navController = rememberNavController()
             val onBackClick: () -> Unit = { navController.popBackStack() }
