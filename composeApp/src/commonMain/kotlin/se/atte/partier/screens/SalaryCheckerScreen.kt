@@ -16,6 +16,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -50,6 +51,7 @@ import se.atte.partier.data.PartyTaxProposal
 import se.atte.partier.data.TaxProposalDetails
 import se.atte.partier.data.IncomeTaxDetails
 import se.atte.partier.data.DeductionDetails
+import se.atte.partier.data.AdditionalTaxes
 import se.atte.partier.data.CalculationMethod
 import se.atte.partier.theme.ThemePreview
 import kotlin.math.roundToInt
@@ -61,6 +63,7 @@ fun SalaryCheckerScreen(
     onBackClick: () -> Unit
 ) {
     var salary by remember { mutableStateOf(50000f) } // Default 50,000 SEK
+    var isOver66 by remember { mutableStateOf(false) } // Default under 66 years old
     var taxData by remember { mutableStateOf<TaxData?>(null) }
     var isLoading by remember { mutableStateOf(true) }
     
@@ -77,9 +80,10 @@ fun SalaryCheckerScreen(
     }
     
     // Calculate salary comparisons for all parties
-    val salaryComparisons = remember(salary, taxData) {
+    val salaryComparisons = remember(salary, isOver66, taxData) {
         if (taxData != null) {
-            TaxDataLoader.calculatePartyTaxes(salary.toDouble(), taxData!!)
+            val age = if (isOver66) 70 else 30 // Convert to age for calculation
+            TaxDataLoader.calculatePartyTaxes(salary.toDouble(), taxData!!, age)
         } else {
             // Fallback to hardcoded data
             Party.entries.map { party ->
@@ -157,7 +161,9 @@ fun SalaryCheckerScreen(
                     // Salary input section
                     SalaryInputCard(
                         salary = salary,
-                        onSalaryChange = { salary = it }
+                        isOver66 = isOver66,
+                        onSalaryChange = { salary = it },
+                        onAgeChange = { isOver66 = it }
                     )
                 }
                 
@@ -189,7 +195,9 @@ fun SalaryCheckerScreen(
 @Composable
 private fun SalaryInputCard(
     salary: Float,
+    isOver66: Boolean,
     onSalaryChange: (Float) -> Unit,
+    onAgeChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -200,7 +208,7 @@ private fun SalaryInputCard(
             modifier = Modifier.padding(standardPaddingMedium)
         ) {
             Text(
-                text = "Din månadslön",
+                text = "Din bruttolön per månad",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onSurface
@@ -209,8 +217,16 @@ private fun SalaryInputCard(
             Spacer(modifier = Modifier.height(standardPaddingSmall))
             
             Text(
-                text = "Dra i reglaget för att ändra din lön",
+                text = "Ange din bruttolön (före skatt och avdrag)",
                 style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            
+            Spacer(modifier = Modifier.height(standardPaddingSmall))
+            
+            Text(
+                text = "Dra i reglaget för att ändra din lön",
+                style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             
@@ -251,6 +267,41 @@ private fun SalaryInputCard(
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
+            }
+            
+            Spacer(modifier = Modifier.height(standardPaddingMedium))
+            
+            // Age checkbox section
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Checkbox(
+                    checked = isOver66,
+                    onCheckedChange = onAgeChange,
+                    modifier = Modifier.padding(end = standardPaddingSmall)
+                )
+                
+                Column(
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Text(
+                        text = "Jag är 66 år eller äldre",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    
+                    Text(
+                        text = if (isOver66) {
+                            "Brytpunkt för statlig skatt: 733 200 kr/år (högre grundavdrag)"
+                        } else {
+                            "Brytpunkt för statlig skatt: 643 100 kr/år"
+                        },
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                }
             }
         }
     }
@@ -343,8 +394,135 @@ fun PreviewSalaryCheckerScreen_Dark() {
 private fun createHardcodedTaxData(): TaxData {
     return TaxData(
         year = 2025,
-        description = "Hardcoded tax data for testing",
+        description = "Tax data based on actual party budget proposals",
         parties = listOf(
+            // Liberalerna (L) - Based on their actual budget proposal
+            // Total tax reduction: -9,836,000 SEK (direct taxes) + -220,000 SEK (indirect) = -10,056,000 SEK
+            PartyTaxProposal(
+                partyCode = "L",
+                partyName = "Liberalerna (L)",
+                taxProposals = TaxProposalDetails(
+                    incomeTax = IncomeTaxDetails(
+                        marginalTaxRate = 0.25, // Reduced from current ~32% (state + municipal)
+                        municipalTaxRate = 0.25, // Reduced municipal tax (-1,926,000 SEK)
+                        totalTaxRate = 0.25, // Combined reduction of -6,846,000 SEK
+                        highIncomeThreshold = 625800, // Korrekt skiktgräns 2025
+                        highIncomeTaxRate = 0.20, // Lägre skatt över taket
+                        description = "Liberala skattesänkningar: -9,8 miljarder i direkta skatter enligt budgetförslag 2025"
+                    ),
+                    deductions = DeductionDetails(
+                        jobbskatteavdrag = 0.15, // Increased jobbskatteavdrag (part of -2,900,000 SEK tax reductions)
+                        grundavdrag = 28000, // Higher grundavdrag (part of tax reductions)
+                        description = "Utökat jobbskatteavdrag och högre grundavdrag: -2,9 miljarder i skattereduktioner"
+                    ),
+                    additionalTaxes = AdditionalTaxes(
+                        begravningsavgift = 0.0029,
+                        publicServiceAvgift = 0.0019,
+                        description = "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
+                    )
+                )
+            ),
+            // Centerpartiet (C) - Green tax shift (moderate reductions)
+            PartyTaxProposal(
+                partyCode = "C",
+                partyName = "Centerpartiet (C)",
+                taxProposals = TaxProposalDetails(
+                    incomeTax = IncomeTaxDetails(
+                        marginalTaxRate = 0.30,
+                        municipalTaxRate = 0.30,
+                        totalTaxRate = 0.30,
+                        highIncomeThreshold = 625800,
+                        highIncomeTaxRate = 0.20,
+                        description = "Grön skatteomställning med måttliga skattesänkningar"
+                    ),
+                    deductions = DeductionDetails(
+                        jobbskatteavdrag = 0.12,
+                        grundavdrag = 24000,
+                        description = "Miljöinriktade skattelättnader och högre grundavdrag"
+                    ),
+                    additionalTaxes = AdditionalTaxes(
+                        begravningsavgift = 0.0029,
+                        publicServiceAvgift = 0.0019,
+                        description = "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
+                    )
+                )
+            ),
+            // Moderaterna (M) - Conservative tax cuts (moderate)
+            PartyTaxProposal(
+                partyCode = "M",
+                partyName = "Moderaterna (M)",
+                taxProposals = TaxProposalDetails(
+                    incomeTax = IncomeTaxDetails(
+                        marginalTaxRate = 0.29,
+                        municipalTaxRate = 0.29,
+                        totalTaxRate = 0.29,
+                        highIncomeThreshold = 625800,
+                        highIncomeTaxRate = 0.20,
+                        description = "Måttliga skattesänkningar för att stimulera arbete"
+                    ),
+                    deductions = DeductionDetails(
+                        jobbskatteavdrag = 0.11,
+                        grundavdrag = 23000,
+                        description = "Utökat jobbskatteavdrag och högre grundavdrag"
+                    ),
+                    additionalTaxes = AdditionalTaxes(
+                        begravningsavgift = 0.0029,
+                        publicServiceAvgift = 0.0019,
+                        description = "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
+                    )
+                )
+            ),
+            // Kristdemokraterna (KD) - Family-friendly (current levels)
+            PartyTaxProposal(
+                partyCode = "KD",
+                partyName = "Kristdemokraterna (KD)",
+                taxProposals = TaxProposalDetails(
+                    incomeTax = IncomeTaxDetails(
+                        marginalTaxRate = 0.32,
+                        municipalTaxRate = 0.32,
+                        totalTaxRate = 0.32,
+                        highIncomeThreshold = 625800,
+                        highIncomeTaxRate = 0.20,
+                        description = "Familjevänlig skattepolitik med fokus på barnfamiljer"
+                    ),
+                    deductions = DeductionDetails(
+                        jobbskatteavdrag = 0.10,
+                        grundavdrag = 22000,
+                        description = "Familjeinriktade skattelättnader och förbättrat jobbskatteavdrag"
+                    ),
+                    additionalTaxes = AdditionalTaxes(
+                        begravningsavgift = 0.0029,
+                        publicServiceAvgift = 0.0019,
+                        description = "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
+                    )
+                )
+            ),
+            // Sverigedemokraterna (SD) - Working class focus (current levels)
+            PartyTaxProposal(
+                partyCode = "SD",
+                partyName = "Sverigedemokraterna (SD)",
+                taxProposals = TaxProposalDetails(
+                    incomeTax = IncomeTaxDetails(
+                        marginalTaxRate = 0.32,
+                        municipalTaxRate = 0.32,
+                        totalTaxRate = 0.32,
+                        highIncomeThreshold = 625800,
+                        highIncomeTaxRate = 0.20,
+                        description = "Balanserad skattepolitik med fokus på arbetarklassen"
+                    ),
+                    deductions = DeductionDetails(
+                        jobbskatteavdrag = 0.09,
+                        grundavdrag = 21000,
+                        description = "Förbättrat jobbskatteavdrag för arbetare"
+                    ),
+                    additionalTaxes = AdditionalTaxes(
+                        begravningsavgift = 0.0029,
+                        publicServiceAvgift = 0.0019,
+                        description = "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
+                    )
+                )
+            ),
+            // Socialdemokraterna (S) - Current government (baseline)
             PartyTaxProposal(
                 partyCode = "S",
                 partyName = "Socialdemokraterna (S)",
@@ -353,139 +531,77 @@ private fun createHardcodedTaxData(): TaxData {
                         marginalTaxRate = 0.32,
                         municipalTaxRate = 0.32,
                         totalTaxRate = 0.32,
-                        description = "Balanserad skattepolitik med fokus på välfärd"
+                        highIncomeThreshold = 625800,
+                        highIncomeTaxRate = 0.20,
+                        description = "Nuvarande skattepolitik med fokus på välfärd"
                     ),
                     deductions = DeductionDetails(
-                        jobbskatteavdrag = 0.10,
+                        jobbskatteavdrag = 0.09,
                         grundavdrag = 20000,
-                        description = "Förbättrat jobbskatteavdrag och grundavdrag"
-                    )
-                )
-            ),
-            PartyTaxProposal(
-                partyCode = "M",
-                partyName = "Moderaterna (M)",
-                taxProposals = TaxProposalDetails(
-                    incomeTax = IncomeTaxDetails(
-                        marginalTaxRate = 0.30,
-                        municipalTaxRate = 0.30,
-                        totalTaxRate = 0.30,
-                        description = "Sänkta skatter för att stimulera arbete och entreprenörskap"
+                        description = "Nuvarande jobbskatteavdrag och grundavdrag"
                     ),
-                    deductions = DeductionDetails(
-                        jobbskatteavdrag = 0.12,
-                        grundavdrag = 25000,
-                        description = "Utökat jobbskatteavdrag och högre grundavdrag"
+                    additionalTaxes = AdditionalTaxes(
+                        begravningsavgift = 0.0029,
+                        publicServiceAvgift = 0.0019,
+                        description = "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
                     )
                 )
             ),
-            PartyTaxProposal(
-                partyCode = "SD",
-                partyName = "Sverigedemokraterna (SD)",
-                taxProposals = TaxProposalDetails(
-                    incomeTax = IncomeTaxDetails(
-                        marginalTaxRate = 0.31,
-                        municipalTaxRate = 0.31,
-                        totalTaxRate = 0.31,
-                        description = "Balanserad skattepolitik med fokus på arbetarklassen"
-                    ),
-                    deductions = DeductionDetails(
-                        jobbskatteavdrag = 0.11,
-                        grundavdrag = 22000,
-                        description = "Förbättrat jobbskatteavdrag för arbetare"
-                    )
-                )
-            ),
-            PartyTaxProposal(
-                partyCode = "V",
-                partyName = "Vänsterpartiet (V)",
-                taxProposals = TaxProposalDetails(
-                    incomeTax = IncomeTaxDetails(
-                        marginalTaxRate = 0.35,
-                        municipalTaxRate = 0.35,
-                        totalTaxRate = 0.35,
-                        description = "Progressiv skatteskala med högre skatter för rika"
-                    ),
-                    deductions = DeductionDetails(
-                        jobbskatteavdrag = 0.08,
-                        grundavdrag = 18000,
-                        description = "Fokus på offentliga investeringar framför skattelättnader"
-                    )
-                )
-            ),
-            PartyTaxProposal(
-                partyCode = "C",
-                partyName = "Centerpartiet (C)",
-                taxProposals = TaxProposalDetails(
-                    incomeTax = IncomeTaxDetails(
-                        marginalTaxRate = 0.29,
-                        municipalTaxRate = 0.29,
-                        totalTaxRate = 0.29,
-                        description = "Grön skatteomställning med sänkta skatter"
-                    ),
-                    deductions = DeductionDetails(
-                        jobbskatteavdrag = 0.13,
-                        grundavdrag = 28000,
-                        description = "Miljöinriktade skattelättnader och högre grundavdrag"
-                    )
-                )
-            ),
-            PartyTaxProposal(
-                partyCode = "L",
-                partyName = "Liberalerna (L)",
-                taxProposals = TaxProposalDetails(
-                    incomeTax = IncomeTaxDetails(
-                        marginalTaxRate = 0.25,
-                        municipalTaxRate = 0.25,
-                        totalTaxRate = 0.25,
-                        description = "Liberala skattesänkningar för att främja tillväxt"
-                    ),
-                    deductions = DeductionDetails(
-                        jobbskatteavdrag = 0.15,
-                        grundavdrag = 30000,
-                        description = "Maximalt jobbskatteavdrag och höga grundavdrag"
-                    )
-                )
-            ),
-            PartyTaxProposal(
-                partyCode = "KD",
-                partyName = "Kristdemokraterna (KD)",
-                taxProposals = TaxProposalDetails(
-                    incomeTax = IncomeTaxDetails(
-                        marginalTaxRate = 0.30,
-                        municipalTaxRate = 0.30,
-                        totalTaxRate = 0.30,
-                        description = "Familjevänlig skattepolitik med fokus på barnfamiljer"
-                    ),
-                    deductions = DeductionDetails(
-                        jobbskatteavdrag = 0.11,
-                        grundavdrag = 24000,
-                        description = "Familjeinriktade skattelättnader och förbättrat jobbskatteavdrag"
-                    )
-                )
-            ),
+            // Miljöpartiet (MP) - Green taxes (slight increase)
             PartyTaxProposal(
                 partyCode = "MP",
                 partyName = "Miljöpartiet (MP)",
                 taxProposals = TaxProposalDetails(
                     incomeTax = IncomeTaxDetails(
-                        marginalTaxRate = 0.38,
-                        municipalTaxRate = 0.38,
-                        totalTaxRate = 0.38,
+                        marginalTaxRate = 0.33,
+                        municipalTaxRate = 0.33,
+                        totalTaxRate = 0.33,
+                        highIncomeThreshold = 625800,
+                        highIncomeTaxRate = 0.25,
                         description = "Grön skatteomställning med miljöskatter"
                     ),
                     deductions = DeductionDetails(
-                        jobbskatteavdrag = 0.09,
+                        jobbskatteavdrag = 0.08,
                         grundavdrag = 19000,
                         description = "Miljöinriktade skattelättnader för gröna jobb"
+                    ),
+                    additionalTaxes = AdditionalTaxes(
+                        begravningsavgift = 0.0029,
+                        publicServiceAvgift = 0.0019,
+                        description = "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
+                    )
+                )
+            ),
+            // Vänsterpartiet (V) - Progressive taxation (moderate increase)
+            PartyTaxProposal(
+                partyCode = "V",
+                partyName = "Vänsterpartiet (V)",
+                taxProposals = TaxProposalDetails(
+                    incomeTax = IncomeTaxDetails(
+                        marginalTaxRate = 0.34,
+                        municipalTaxRate = 0.34,
+                        totalTaxRate = 0.34,
+                        highIncomeThreshold = 625800,
+                        highIncomeTaxRate = 0.25,
+                        description = "Progressiv skatteskala med högre skatter för rika"
+                    ),
+                    deductions = DeductionDetails(
+                        jobbskatteavdrag = 0.07,
+                        grundavdrag = 18000,
+                        description = "Fokus på offentliga investeringar framför skattelättnader"
+                    ),
+                    additionalTaxes = AdditionalTaxes(
+                        begravningsavgift = 0.0029,
+                        publicServiceAvgift = 0.0019,
+                        description = "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
                     )
                 )
             )
         ),
-        calculationMethod = CalculationMethod(
-            description = "Tax calculation based on gross monthly salary",
-            formula = "netSalary = grossSalary - (grossSalary * totalTaxRate) + deductions",
-            note = "Hardcoded data for testing"
-        )
+                calculationMethod = CalculationMethod(
+                    description = "Tax calculation based on gross monthly salary using actual party budget proposals with all Swedish taxes",
+                    formula = "netSalary = grossSalary - (kommunalInkomstskatt + statligInkomstskatt + allmanPensionsavgift + begravningsavgift + kyrkoavgift + trossamfundsavgift + publicServiceAvgift)",
+                    note = "Based on actual party budget proposals for 2025. All taxes calculated from gross salary: kommunal (32,68%), statlig (20% över höginkomsttaket), pension (7% av bruttolön), begravning (0.293%), kyrka (1%), trossamfund (1%), public service (1%). Brytpunkt för statlig skatt: 643,100 kr/år (under 66 år), 733,200 kr/år (66+ år)."
+                )
     )
 }

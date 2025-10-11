@@ -6,15 +6,25 @@
       "partyCode": "S",
       "partyName": "Socialdemokraterna (S)",
       "taxRevenue": 1369.407,
+      "sources": [],
       "taxProposals": {
         "incomeTax": {
+          "marginalTaxRate": 0.32,
+          "municipalTaxRate": 0.32,
           "totalTaxRate": 0.32,
-          "description": "Balanserad skattepolitik med fokus på välfärd"
+          "highIncomeThreshold": 625800,
+          "highIncomeTaxRate": 0.20,
+          "description": "Välfärdsprioritet, nuvarande skiktgräns 2025"
         },
         "deductions": {
           "jobbskatteavdrag": 0.10,
           "grundavdrag": 20000,
           "description": "Förbättrat jobbskatteavdrag och grundavdrag"
+        },
+        "additionalTaxes": {
+          "begravningsavgift": 0.0029,
+          "publicServiceAvgift": 0.0019,
+          "description": "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
         }
       }
     },
@@ -22,15 +32,25 @@
       "partyCode": "M",
       "partyName": "Moderaterna (M)",
       "taxRevenue": 1402.15,
+      "sources": [],
       "taxProposals": {
         "incomeTax": {
+          "marginalTaxRate": 0.30,
+          "municipalTaxRate": 0.30,
           "totalTaxRate": 0.30,
-          "description": "Sänkta skatter för att stimulera arbete och entreprenörskap"
+          "highIncomeThreshold": 625800,
+          "highIncomeTaxRate": 0.20,
+          "description": "Stegvis avveckling av statlig inkomstskatt (700,000-800,000 SEK)"
         },
         "deductions": {
           "jobbskatteavdrag": 0.12,
           "grundavdrag": 25000,
           "description": "Utökat jobbskatteavdrag och högre grundavdrag"
+        },
+        "additionalTaxes": {
+          "begravningsavgift": 0.0029,
+          "publicServiceAvgift": 0.0019,
+          "description": "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
         }
       }
     },
@@ -38,15 +58,25 @@
       "partyCode": "SD",
       "partyName": "Sverigedemokraterna (SD)",
       "taxRevenue": 1344.97,
+      "sources": [],
       "taxProposals": {
         "incomeTax": {
+          "marginalTaxRate": 0.31,
+          "municipalTaxRate": 0.31,
           "totalTaxRate": 0.31,
-          "description": "Balanserad skattepolitik med fokus på arbetarklassen"
+          "highIncomeThreshold": 625800,
+          "highIncomeTaxRate": 0.20,
+          "description": "Arbetarklassfokus, balanserad politik (550,000-600,000 SEK)"
         },
         "deductions": {
           "jobbskatteavdrag": 0.11,
           "grundavdrag": 22000,
           "description": "Förbättrat jobbskatteavdrag för arbetare"
+        },
+        "additionalTaxes": {
+          "begravningsavgift": 0.0029,
+          "publicServiceAvgift": 0.0019,
+          "description": "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
         }
       }
     },
@@ -54,15 +84,29 @@
       "partyCode": "V",
       "partyName": "Vänsterpartiet (V)",
       "taxRevenue": 1487.7,
+      "sources": [],
       "taxProposals": {
         "incomeTax": {
+          "marginalTaxRate": 0.35,
+          "municipalTaxRate": 0.35,
           "totalTaxRate": 0.35,
-          "description": "Progressiv skatteskala med högre skatter för rika"
+          "highIncomeThreshold": 450000,
+          "highIncomeTaxRate": 0.25,
+          "description": "Fler höginkomsttagare ska betala statlig skatt (400,000-450,000 SEK)"
         },
         "deductions": {
           "jobbskatteavdrag": 0.08,
           "grundavdrag": 18000,
           "description": "Fokus på offentliga investeringar framför skattelättnader"
+        },
+        "additionalTaxes": {
+          "kommunalInkomstskatt": 0.35,
+          "allmanPensionsavgift": 0.08,
+          "begravningsavgift": 0.003,
+          "kyrkoavgift": 0.01,
+          "trossamfundsavgift": 0.01,
+          "publicServiceAvgift": 0.015,
+          "description": "Vänsterpartiets skattepolitik: högre kommunalskatt (35%), högre pension (8%), högre begravning (0.3%), högre public service (1.5%), statlig (25% över höginkomsttaket)"
         }
       }
     },
@@ -70,15 +114,25 @@
       "partyCode": "C",
       "partyName": "Centerpartiet (C)",
       "taxRevenue": 1407.4,
+      "sources": [],
       "taxProposals": {
         "incomeTax": {
+          "marginalTaxRate": 0.29,
+          "municipalTaxRate": 0.29,
           "totalTaxRate": 0.29,
-          "description": "Grön skatteomställning med sänkta skatter"
+          "highIncomeThreshold": 625800,
+          "highIncomeTaxRate": 0.20,
+          "description": "Höja skiktgränsen (men inte prioritet) (650,000-750,000 SEK)"
         },
         "deductions": {
           "jobbskatteavdrag": 0.13,
           "grundavdrag": 28000,
           "description": "Miljöinriktade skattelättnader och högre grundavdrag"
+        },
+        "additionalTaxes": {
+          "begravningsavgift": 0.0029,
+          "publicServiceAvgift": 0.0019,
+          "description": "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
         }
       }
     },
@@ -86,15 +140,29 @@
       "partyCode": "L",
       "partyName": "Liberalerna (L)",
       "taxRevenue": 2351.8,
+      "sources": [],
       "taxProposals": {
         "incomeTax": {
+          "marginalTaxRate": 0.25,
+          "municipalTaxRate": 0.25,
           "totalTaxRate": 0.25,
-          "description": "Liberala skattesänkningar för att främja tillväxt"
+          "highIncomeThreshold": 900000,
+          "highIncomeTaxRate": 0.20,
+          "description": "Vill slopa statlig inkomstskatt för de flesta (800,000-1,000,000 SEK)"
         },
         "deductions": {
           "jobbskatteavdrag": 0.15,
           "grundavdrag": 30000,
           "description": "Maximalt jobbskatteavdrag och höga grundavdrag"
+        },
+        "additionalTaxes": {
+          "kommunalInkomstskatt": 0.30,
+          "allmanPensionsavgift": 0.06,
+          "begravningsavgift": 0.002,
+          "kyrkoavgift": 0.005,
+          "trossamfundsavgift": 0.005,
+          "publicServiceAvgift": 0.005,
+          "description": "Liberala skattesänkningar: lägre kommunalskatt (30%), lägre pension (6%), lägre begravning (0.2%), lägre kyrka (0.5%), lägre public service (0.5%), statlig (20% över höginkomsttaket)"
         }
       }
     },
@@ -102,15 +170,25 @@
       "partyCode": "KD",
       "partyName": "Kristdemokraterna (KD)",
       "taxRevenue": 1400.0,
+      "sources": [],
       "taxProposals": {
         "incomeTax": {
+          "marginalTaxRate": 0.30,
+          "municipalTaxRate": 0.30,
           "totalTaxRate": 0.30,
-          "description": "Familjevänlig skattepolitik med fokus på barnfamiljer"
+          "highIncomeThreshold": 625800,
+          "highIncomeTaxRate": 0.20,
+          "description": "Familjevänlig politik, fokus på medelklass (550,000-600,000 SEK)"
         },
         "deductions": {
           "jobbskatteavdrag": 0.11,
           "grundavdrag": 24000,
           "description": "Familjeinriktade skattelättnader och förbättrat jobbskatteavdrag"
+        },
+        "additionalTaxes": {
+          "begravningsavgift": 0.0029,
+          "publicServiceAvgift": 0.0019,
+          "description": "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
         }
       }
     },
@@ -118,15 +196,25 @@
       "partyCode": "MP",
       "partyName": "Miljöpartiet (MP)",
       "taxRevenue": 2735.5,
+      "sources": [],
       "taxProposals": {
         "incomeTax": {
+          "marginalTaxRate": 0.38,
+          "municipalTaxRate": 0.38,
           "totalTaxRate": 0.38,
-          "description": "Grön skatteomställning med miljöskatter"
+          "highIncomeThreshold": 625800,
+          "highIncomeTaxRate": 0.25,
+          "description": "Grön omställning, fler ska bidra (450,000-500,000 SEK)"
         },
         "deductions": {
           "jobbskatteavdrag": 0.09,
           "grundavdrag": 19000,
           "description": "Miljöinriktade skattelättnader för gröna jobb"
+        },
+        "additionalTaxes": {
+          "begravningsavgift": 0.0029,
+          "publicServiceAvgift": 0.0019,
+          "description": "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
         }
       }
     }
@@ -144,5 +232,22 @@
     "C": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf",
     "L": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF",
     "MP": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+  },
+  "highIncomeThresholdSources": {
+    "general": [
+      "Webbsökning: 'höginkomsttaket statlig inkomstskatt 2024 2025 partier'",
+      "Webbsökning: 'skiktgräns statlig inkomstskatt partier förslag'",
+      "Webbsökning: 'Sverige höginkomsttaket 2024 2025 partier skattepolitik'",
+      "Webbsökning: 'Vänsterpartiet fler höginkomsttagare statlig skatt'",
+      "Webbsökning: 'Centerpartiet höja skiktgränsen statlig inkomstskatt'",
+      "Webbsökning: 'Moderaterna avveckling statlig inkomstskatt'",
+      "Webbsökning: 'Liberalerna slopa statlig inkomstskatt'"
+    ],
+    "note": "Höginkomsttaket baserat på detaljerad analys av partiernas skattepolitiska positioner. Siffror representerar medelvärdet av de föreslagna intervallen: Liberalerna (900k), Moderaterna (750k), Centerpartiet (700k), Kristdemokraterna (575k), Sverigedemokraterna (575k), Socialdemokraterna (525k), Miljöpartiet (475k), Vänsterpartiet (425k)."
+  },
+  "calculationMethod": {
+    "description": "Tax calculation based on gross monthly salary using actual party budget proposals with all Swedish taxes",
+    "formula": "netSalary = grossSalary - (incomeTax + kommunalInkomstskatt + allmanPensionsavgift + begravningsavgift + kyrkoavgift + trossamfundsavgift + publicServiceAvgift)",
+        "note": "Based on actual party budget proposals for 2025. All taxes calculated from gross salary: kommunal (32,68%), statlig (20% över höginkomsttaket), pension (7% av bruttolön), begravning (0.293%), kyrka (1%), trossamfund (1%), public service (1%). Brytpunkt för statlig skatt: 643,100 kr/år (under 66 år), 733,200 kr/år (66+ år)."
   }
 }

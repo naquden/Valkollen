@@ -14,13 +14,15 @@ data class TaxData(
 data class PartyTaxProposal(
     val partyCode: String,
     val partyName: String,
-    val taxProposals: TaxProposalDetails
+    val taxProposals: TaxProposalDetails,
+    val sources: List<String> = emptyList()
 )
 
 @Serializable
 data class TaxProposalDetails(
     val incomeTax: IncomeTaxDetails,
-    val deductions: DeductionDetails
+    val deductions: DeductionDetails,
+    val additionalTaxes: AdditionalTaxes
 )
 
 @Serializable
@@ -28,6 +30,8 @@ data class IncomeTaxDetails(
     val marginalTaxRate: Double,
     val municipalTaxRate: Double,
     val totalTaxRate: Double,
+    val highIncomeThreshold: Int,
+    val highIncomeTaxRate: Double,
     val description: String
 )
 
@@ -35,6 +39,13 @@ data class IncomeTaxDetails(
 data class DeductionDetails(
     val jobbskatteavdrag: Double,
     val grundavdrag: Int,
+    val description: String
+)
+
+@Serializable
+data class AdditionalTaxes(
+    val begravningsavgift: Double,
+    val publicServiceAvgift: Double,
     val description: String
 )
 
