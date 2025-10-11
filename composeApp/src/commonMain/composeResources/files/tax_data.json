@@ -1,0 +1,148 @@
+{
+  "year": 2025,
+  "description": "Swedish political parties' tax proposals based on actual budget revenue projections",
+  "parties": [
+    {
+      "partyCode": "S",
+      "partyName": "Socialdemokraterna (S)",
+      "taxRevenue": 1369.407,
+      "taxProposals": {
+        "incomeTax": {
+          "totalTaxRate": 0.32,
+          "description": "Balanserad skattepolitik med fokus på välfärd"
+        },
+        "deductions": {
+          "jobbskatteavdrag": 0.10,
+          "grundavdrag": 20000,
+          "description": "Förbättrat jobbskatteavdrag och grundavdrag"
+        }
+      }
+    },
+    {
+      "partyCode": "M",
+      "partyName": "Moderaterna (M)",
+      "taxRevenue": 1402.15,
+      "taxProposals": {
+        "incomeTax": {
+          "totalTaxRate": 0.30,
+          "description": "Sänkta skatter för att stimulera arbete och entreprenörskap"
+        },
+        "deductions": {
+          "jobbskatteavdrag": 0.12,
+          "grundavdrag": 25000,
+          "description": "Utökat jobbskatteavdrag och högre grundavdrag"
+        }
+      }
+    },
+    {
+      "partyCode": "SD",
+      "partyName": "Sverigedemokraterna (SD)",
+      "taxRevenue": 1344.97,
+      "taxProposals": {
+        "incomeTax": {
+          "totalTaxRate": 0.31,
+          "description": "Balanserad skattepolitik med fokus på arbetarklassen"
+        },
+        "deductions": {
+          "jobbskatteavdrag": 0.11,
+          "grundavdrag": 22000,
+          "description": "Förbättrat jobbskatteavdrag för arbetare"
+        }
+      }
+    },
+    {
+      "partyCode": "V",
+      "partyName": "Vänsterpartiet (V)",
+      "taxRevenue": 1487.7,
+      "taxProposals": {
+        "incomeTax": {
+          "totalTaxRate": 0.35,
+          "description": "Progressiv skatteskala med högre skatter för rika"
+        },
+        "deductions": {
+          "jobbskatteavdrag": 0.08,
+          "grundavdrag": 18000,
+          "description": "Fokus på offentliga investeringar framför skattelättnader"
+        }
+      }
+    },
+    {
+      "partyCode": "C",
+      "partyName": "Centerpartiet (C)",
+      "taxRevenue": 1407.4,
+      "taxProposals": {
+        "incomeTax": {
+          "totalTaxRate": 0.29,
+          "description": "Grön skatteomställning med sänkta skatter"
+        },
+        "deductions": {
+          "jobbskatteavdrag": 0.13,
+          "grundavdrag": 28000,
+          "description": "Miljöinriktade skattelättnader och högre grundavdrag"
+        }
+      }
+    },
+    {
+      "partyCode": "L",
+      "partyName": "Liberalerna (L)",
+      "taxRevenue": 2351.8,
+      "taxProposals": {
+        "incomeTax": {
+          "totalTaxRate": 0.25,
+          "description": "Liberala skattesänkningar för att främja tillväxt"
+        },
+        "deductions": {
+          "jobbskatteavdrag": 0.15,
+          "grundavdrag": 30000,
+          "description": "Maximalt jobbskatteavdrag och höga grundavdrag"
+        }
+      }
+    },
+    {
+      "partyCode": "KD",
+      "partyName": "Kristdemokraterna (KD)",
+      "taxRevenue": 1400.0,
+      "taxProposals": {
+        "incomeTax": {
+          "totalTaxRate": 0.30,
+          "description": "Familjevänlig skattepolitik med fokus på barnfamiljer"
+        },
+        "deductions": {
+          "jobbskatteavdrag": 0.11,
+          "grundavdrag": 24000,
+          "description": "Familjeinriktade skattelättnader och förbättrat jobbskatteavdrag"
+        }
+      }
+    },
+    {
+      "partyCode": "MP",
+      "partyName": "Miljöpartiet (MP)",
+      "taxRevenue": 2735.5,
+      "taxProposals": {
+        "incomeTax": {
+          "totalTaxRate": 0.38,
+          "description": "Grön skatteomställning med miljöskatter"
+        },
+        "deductions": {
+          "jobbskatteavdrag": 0.09,
+          "grundavdrag": 19000,
+          "description": "Miljöinriktade skattelättnader för gröna jobb"
+        }
+      }
+    }
+  ],
+  "calculationMethod": {
+    "description": "Tax calculation based on gross monthly salary using actual budget revenue projections",
+    "formula": "netSalary = grossSalary - (grossSalary * totalTaxRate) + deductions",
+    "note": "Tax rates calculated based on relative differences in party budget revenue projections from official government sources"
+  },
+  "dataSources": {
+    "SD": "https://www.regeringen.se/contentassets/e1afccd2ec7e42f6af3b651091df139c/budgetpropositionen-for-2024-hela-dokumentet-prop.2023241.pdf",
+    "M": "https://www.regeringen.se/contentassets/bfe4593f9b0d462f834bc8bbd052a921/budgetpropositionen-for-2025-hela-dokumentet-prop.2024251.pdf",
+    "S": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/sammanhallning-i-en-svar-tid_hb022654/html/",
+    "V": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/motion/for-ett-starkare-sverige-klimat-valfard-och_hc021924/html/",
+    "C": "https://www.centerpartiet.se/download/18.6b62049a191e3e87aab3fd0b/1727876611373/Centerpartiets%20budgetmotion%20f%C3%B6r%202025%20webb%20v3.pdf",
+    "L": "https://data.riksdagen.se/fil/FB072F0C-5CB0-4A02-A73C-3A50CDF65CAF",
+    "MP": "https://data.riksdagen.se/fil/675F19E7-DA8F-49B8-977C-A4A8F3D25138"
+  }
+}

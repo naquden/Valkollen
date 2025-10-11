@@ -29,6 +29,7 @@ import se.atte.partier.screens.ExpenseScreen
 import se.atte.partier.screens.IncomeScreen
 import se.atte.partier.screens.PartyDetailScreen
 import se.atte.partier.screens.PartySelectionScreen
+import se.atte.partier.screens.SalaryCheckerScreen
 import se.atte.partier.theme.AppTheme
 
 @Serializable
@@ -54,6 +55,9 @@ sealed class Screen {
 
     @Serializable
     data class PartyDetail(val partyCode: String) : Screen()
+
+    @Serializable
+    data object SalaryChecker : Screen()
 
 }
 
@@ -158,6 +162,11 @@ fun App() {
                                 PartyDetailScreen(
                                     partyCode = partyCode,
                                     onBackClick = onBackClick,
+                                )
+                            }
+                            composable<Screen.SalaryChecker> {
+                                SalaryCheckerScreen(
+                                    onBackClick = onBackClick
                                 )
                             }
                         }

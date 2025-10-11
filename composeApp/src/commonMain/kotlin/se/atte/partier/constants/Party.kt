@@ -50,7 +50,7 @@ enum class Party(
 
     companion object {
         // Fallback color for unknown parties
-        val DEFAULT_COLOR = Color(0x000000) // Black
+        val DEFAULT_COLOR = Color(0xFF000000) // Black
 
         fun fromCode(code: String): Party? {
             return entries.find { it.code.equals(code, ignoreCase = true) }

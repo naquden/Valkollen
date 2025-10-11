@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeContent
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Calculate
 import androidx.compose.material.icons.rounded.Wallet
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.material3.Card
@@ -264,6 +265,12 @@ private fun getNavigationItems(navController: NavController) = listOf(
         Icons.Rounded.Wallet,
         "Budget",
         { navController.navigate(Screen.Budget) },
+    ),
+    Quadruple(
+        Screen.SalaryChecker,
+        Icons.Filled.Calculate,
+        "Lön kollen",
+        { navController.navigate(Screen.SalaryChecker) },
     ),
 )
 
