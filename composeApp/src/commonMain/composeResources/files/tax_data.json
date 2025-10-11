@@ -24,6 +24,10 @@
         "additionalTaxes": {
           "begravningsavgift": 0.0029,
           "publicServiceAvgift": 0.0019,
+          "kommunalInkomstskatt": 0.0,
+          "allmanPensionsavgift": 0.0,
+          "kyrkoavgift": 0.0,
+          "trossamfundsavgift": 0.0,
           "description": "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
         }
       }
@@ -50,6 +54,10 @@
         "additionalTaxes": {
           "begravningsavgift": 0.0029,
           "publicServiceAvgift": 0.0019,
+          "kommunalInkomstskatt": 0.0,
+          "allmanPensionsavgift": 0.0,
+          "kyrkoavgift": 0.0,
+          "trossamfundsavgift": 0.0,
           "description": "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
         }
       }
@@ -76,6 +84,10 @@
         "additionalTaxes": {
           "begravningsavgift": 0.0029,
           "publicServiceAvgift": 0.0019,
+          "kommunalInkomstskatt": 0.0,
+          "allmanPensionsavgift": 0.0,
+          "kyrkoavgift": 0.0,
+          "trossamfundsavgift": 0.0,
           "description": "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
         }
       }
@@ -90,14 +102,16 @@
           "marginalTaxRate": 0.35,
           "municipalTaxRate": 0.35,
           "totalTaxRate": 0.35,
-          "highIncomeThreshold": 450000,
-          "highIncomeTaxRate": 0.25,
-          "description": "Fler höginkomsttagare ska betala statlig skatt (400,000-450,000 SEK)"
+          "highIncomeThreshold": 643100,
+          "highIncomeTaxRate": 0.20,
+          "varnskatt": 0.05,
+          "varnskattThreshold": 744000,
+          "description": "Vänsterpartiets förslag: värnskatt på 5% för de som tjänar mer än 62,000 kr/månad (744,000 kr/år) utöver standard statlig skatt"
         },
         "deductions": {
-          "jobbskatteavdrag": 0.08,
-          "grundavdrag": 18000,
-          "description": "Fokus på offentliga investeringar framför skattelättnader"
+          "jobbskatteavdrag": 0.04,
+          "grundavdrag": 17000,
+          "description": "Fokus på offentliga investeringar framför skattelättnader, lägre jobbskatteavdrag (2022-nivå)"
         },
         "additionalTaxes": {
           "kommunalInkomstskatt": 0.35,
@@ -132,6 +146,10 @@
         "additionalTaxes": {
           "begravningsavgift": 0.0029,
           "publicServiceAvgift": 0.0019,
+          "kommunalInkomstskatt": 0.0,
+          "allmanPensionsavgift": 0.0,
+          "kyrkoavgift": 0.0,
+          "trossamfundsavgift": 0.0,
           "description": "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
         }
       }
@@ -188,6 +206,10 @@
         "additionalTaxes": {
           "begravningsavgift": 0.0029,
           "publicServiceAvgift": 0.0019,
+          "kommunalInkomstskatt": 0.0,
+          "allmanPensionsavgift": 0.0,
+          "kyrkoavgift": 0.0,
+          "trossamfundsavgift": 0.0,
           "description": "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
         }
       }
@@ -207,13 +229,17 @@
           "description": "Grön omställning, fler ska bidra (450,000-500,000 SEK)"
         },
         "deductions": {
-          "jobbskatteavdrag": 0.09,
-          "grundavdrag": 19000,
-          "description": "Miljöinriktade skattelättnader för gröna jobb"
+          "jobbskatteavdrag": 0.05,
+          "grundavdrag": 18000,
+          "description": "Grön omställning, lägre jobbskatteavdrag (2022-nivå) för att finansiera miljöinvesteringar"
         },
         "additionalTaxes": {
           "begravningsavgift": 0.0029,
           "publicServiceAvgift": 0.0019,
+          "kommunalInkomstskatt": 0.0,
+          "allmanPensionsavgift": 0.0,
+          "kyrkoavgift": 0.0,
+          "trossamfundsavgift": 0.0,
           "description": "Faktiska skatter från lönebesked: begravning (0.29%), public service (0.19%)"
         }
       }
@@ -247,7 +273,7 @@
   },
   "calculationMethod": {
     "description": "Tax calculation based on gross monthly salary using actual party budget proposals with all Swedish taxes",
-    "formula": "netSalary = grossSalary - (incomeTax + kommunalInkomstskatt + allmanPensionsavgift + begravningsavgift + kyrkoavgift + trossamfundsavgift + publicServiceAvgift)",
-        "note": "Based on actual party budget proposals for 2025. All taxes calculated from gross salary: kommunal (32,68%), statlig (20% över höginkomsttaket), pension (7% av bruttolön), begravning (0.293%), kyrka (1%), trossamfund (1%), public service (1%). Brytpunkt för statlig skatt: 643,100 kr/år (under 66 år), 733,200 kr/år (66+ år)."
+    "formula": "netSalary = grossSalary - (kommunalTax + statligTax + varnskattTax + kommunalInkomstskatt + allmanPensionsavgift + begravningsavgift + kyrkoavgift + trossamfundsavgift + publicServiceAvgift) + jobbskatteavdrag + forvarvsinkomstReduktion",
+    "note": "Based on actual party budget proposals for 2025. All taxes calculated from gross salary: kommunal (varies per party), statlig (20% över höginkomsttaket), värnskatt (5% för Vänsterpartiet över 744,000 kr/år), pension (varies per party), begravning (0.29%), kyrka (varies per party), trossamfund (varies per party), public service (0.19%). Brytpunkt för statlig skatt: 643,100 kr/år (under 66 år), 733,200 kr/år (66+ år)."
   }
 }

@@ -23,9 +23,13 @@ object TaxDataLoader {
             val highIncomeThreshold = party.taxProposals.incomeTax.highIncomeThreshold
             val highIncomeTaxRate = party.taxProposals.incomeTax.highIncomeTaxRate
             
-            // Additional taxes from party proposals (only those in real payslip)
+            // Additional taxes from party proposals
             val begravningsavgift = party.taxProposals.additionalTaxes.begravningsavgift
             val publicServiceAvgift = party.taxProposals.additionalTaxes.publicServiceAvgift
+            val kommunalInkomstskatt = party.taxProposals.additionalTaxes.kommunalInkomstskatt
+            val allmanPensionsavgift = party.taxProposals.additionalTaxes.allmanPensionsavgift
+            val kyrkoavgift = party.taxProposals.additionalTaxes.kyrkoavgift
+            val trossamfundsavgift = party.taxProposals.additionalTaxes.trossamfundsavgift
             
             // Swedish tax calculation - Step by step according to official rules:
             
@@ -40,16 +44,25 @@ object TaxDataLoader {
             val kommunalTax = taxableIncome * totalTaxRate
             
             // Step 3: Statlig skatt (läggs till endast om inkomsten överstiger brytpunkten)
-            // Under 66 år: 643,100 kr/år, 66+ år: 733,200 kr/år
-            // 20% på den del som överstiger brytpunkten
+            // Standard: Under 66 år: 643,100 kr/år, 66+ år: 733,200 kr/år, 20% skatt
             val effectiveHighIncomeThreshold = if (age >= 66) {
                 733200.0 // 66+ år
             } else {
                 643100.0 // Under 66 år
             }
             
+            // Calculate standard statlig skatt (20%)
             val statligTax = if (grossSalary > effectiveHighIncomeThreshold) {
-                (grossSalary - effectiveHighIncomeThreshold) * 0.20 // 20% statlig skatt
+                (grossSalary - effectiveHighIncomeThreshold) * 0.20
+            } else {
+                0.0
+            }
+            
+            // Step 3b: Värnskatt (endast för Vänsterpartiet)
+            val varnskatt = party.taxProposals.incomeTax.varnskatt
+            val varnskattThreshold = party.taxProposals.incomeTax.varnskattThreshold
+            val varnskattTax = if (varnskatt != null && varnskattThreshold != null && grossSalary > varnskattThreshold) {
+                (grossSalary - varnskattThreshold) * varnskatt
             } else {
                 0.0
             }
@@ -57,18 +70,23 @@ object TaxDataLoader {
             // Step 4: Jobbskatteavdrag (2025-regler: Upp till 3,941 kr/månad)
             // Börjar vid ca 3,000 kr och höjs tills 40,000 kr brutto, sedan har taket uppnåts
             val dynamicJobbskatteavdrag = calculateJobbskatteavdrag(grossSalary, age)
-            val incomeTaxAfterDeduction = maxOf(0.0, (kommunalTax + statligTax) - dynamicJobbskatteavdrag)
+            val incomeTaxAfterDeduction = maxOf(0.0, (kommunalTax + statligTax + varnskattTax) - dynamicJobbskatteavdrag)
             
-            // Step 5: Ytterligare skatter (endast de som finns i lönebeskedet)
-            // Begravningsavgift och public service-avgift
+            // Step 5: Ytterligare skatter (alla skatter från partiförslag)
             val begravningTax = grossSalary * begravningsavgift
             val publicServiceTax = grossSalary * publicServiceAvgift
+            val kommunalInkomstskattTax = grossSalary * kommunalInkomstskatt
+            val allmanPensionsavgiftTax = grossSalary * allmanPensionsavgift
+            val kyrkoavgiftTax = grossSalary * kyrkoavgift
+            val trossamfundsavgiftTax = grossSalary * trossamfundsavgift
             
             // Step 6: Skattereduktion förvärvsinkomst (från lönebeskedet: +125 kr)
             val forvarvsinkomstReduktion = 125.0
             
             // Step 7: Nettolön (bruttolön - total skatt + reduktioner = nettolön)
-            val finalTaxAmount = incomeTaxAfterDeduction + begravningTax + publicServiceTax - forvarvsinkomstReduktion
+            val finalTaxAmount = incomeTaxAfterDeduction + begravningTax + publicServiceTax + 
+                               kommunalInkomstskattTax + allmanPensionsavgiftTax + 
+                               kyrkoavgiftTax + trossamfundsavgiftTax - forvarvsinkomstReduktion
             
             // 6. Calculate net salary
             val netSalary = grossSalary - finalTaxAmount

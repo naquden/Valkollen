@@ -32,6 +32,8 @@ data class IncomeTaxDetails(
     val totalTaxRate: Double,
     val highIncomeThreshold: Int,
     val highIncomeTaxRate: Double,
+    val varnskatt: Double? = null, // Värnskatt - endast för Vänsterpartiet
+    val varnskattThreshold: Int? = null, // Brytpunkt för värnskatt
     val description: String
 )
 
@@ -46,6 +48,10 @@ data class DeductionDetails(
 data class AdditionalTaxes(
     val begravningsavgift: Double,
     val publicServiceAvgift: Double,
+    val kommunalInkomstskatt: Double,
+    val allmanPensionsavgift: Double,
+    val kyrkoavgift: Double,
+    val trossamfundsavgift: Double,
     val description: String
 )
 
